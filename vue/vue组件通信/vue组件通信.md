@@ -139,7 +139,7 @@
 
 ## eventBus
 
-- 有点：父子组件与多层级组件通信都比较方便
+- 优点：多层级组件通信都比较方便
 - 缺点:  使用较多`$eventBus`后，维护容易混乱
 - 方法： 通过 `Vue.prototype.$eventBus = new Vue();`，初始一个空的vue实例，此后通过`$eventBus`为事件总线（所有使用eventBus的事件都是绑定到此vue实例上）管理所有事件。
 
@@ -160,4 +160,87 @@
   
 
 ## provider 与 inject
+
+- 优点：，`inject`只能用于`provide`后代组件
+
+- 缺点：大量使用容易混乱，`provide`返回对象中的基本类型数据不是响应式的，需要封装成引用类型返回
+
+- 方法：
+
+  - parent
+
+  ```js
+  <template>
+    <div class="parent">
+      <div @click="setMsg">parent</div>
+      <div>emitData:{{ emitData }}</div>
+      <hr />
+      <Child />
+    </div>
+  </template>
+  <script>
+  import Child from './c';
+  
+  // provide
+  export default {
+    name: 'parent',
+    components: { Child },
+    data() {
+      return { emitData: '', msg: 'parent', msgObj: { msg: 'parent msgObj' } };
+    },
+    provide() {
+      return { msg: this.msg, msgObj: this.msgObj };
+    },
+    methods: {
+      setMsg() {
+        console.log('msg change ');
+        this.msgObj.msg = this.msg = 'change parent';
+      }
+    },
+    mounted() {}
+  };
+  </script>
+  ```
+
+  - child
+
+  ```js
+  <template>
+    <div class="child">
+      <div>child</div>
+      <div>msg:{{ msg }}</div>
+      <div>msgObj.msg:{{ msgObj.msg }}</div>
+    </div>
+  </template>
+  <script>
+  export default {
+    name: 'child',
+    inject: ['msg', 'msgObj']
+  };
+  </script>
+  ```
+
+  ![image-20200715144918078](/Users/mhc/work/FENotes/vue/vue组件通信/image-20200715144918078.png)
+
+  ![image-20200715144946729](/Users/mhc/work/FENotes/vue/vue组件通信/image-20200715144946729.png)
+
+## vuex
+
+- `Vuex` 状态管理，中小型项目建议优先使用以上4中就可以了，大型项目可以考虑`Vuex`,这里暂不介绍使用`vuex`
+
+
+
+## 总结
+
+- 父子组件通信： `props`,`callback`,`$emit` 实现相对简单
+
+- 兄弟组件通信： `props`,`callback`,`$emit`,`provide`,`inject` 实现相对简单
+
+- 多层级组件后代关系： `provide`,`inject` 实现相对简单
+
+- 多层级组件： `$eventBus` 实现相对简单
+
+- 大量数据多个组件共享：`Vuex`
+
+**使用哪种方式还是要多考虑实际情况，灵活使用**
 
