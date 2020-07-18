@@ -47,7 +47,7 @@
 const Child = {
   name: 'child',
   // 接收父组件传递的props
-  props: ['pMsg', 'pString','pRes'],
+  props: ['pMsg', 'pString', 'pRes'],
   data() {
     return { msg: 'name is child' };
   },
@@ -69,11 +69,10 @@ const Child = {
       deep: true
     },
     // 字符串实现监听引用类型的某一个属性
-    'pRes.code':{
-      handler(val,old){
+    'pRes.code': {
+      handler(val, old) {
         console.log('pRes.code old: ', old);
         console.log('pRes.code newVal: ', val);
-        
       }
     }
   },
@@ -104,7 +103,7 @@ const app = {
   // 引用组件 多种方式
   components: { Child, 'child-2': Child2 },
 
-  //  响应式数据 不能使用箭头函数 this指向问题
+  //  响应式数据 不推荐使用箭头函数 this指向问题
   data() {
     return { msg: 'name is app', count: 0, res: { code: 0 } };
   },
@@ -114,10 +113,10 @@ const app = {
     onClick() {
       console.log('onClick');
       this.msg = 'onClick';
-      this.res.code = 1
+      this.res.code = 1;
     }
   },
-
+  // template:'#app-template'
   /**
    * html 模板 {{msg}} 获取到的是data返回的msg
    * props 传递 ：
@@ -146,3 +145,20 @@ const vm = new Vue(app);
 
 // 替换渲染id为app的dom
 vm.$mount('#app');
+
+const options = {
+  el:'',
+  name:'name',
+  components:{},
+  data() {
+    return {};
+  },
+  props:[],
+  inject:[],
+  watch:{},
+  computed:{},
+  methods:{},
+  template:``,
+  render(h){return h()},
+  // other props 和 生命周期
+};
