@@ -129,7 +129,10 @@ const vm = new Vue({el:'#app'})
 ```
 
 > 总结
+> 传的的是字符串,Vue内部是通过document.querySelector()查找dom并替换的。
+> 传递的是Element，Vue内部就是直接替换这个Element。
 >​ **把vm挂载到一个dom节点上，vm会替换当前dom节点，使用`el`参数 或者调用`vm.$mount()`挂载。**
+> [深入理解](https://juejin.im/post/5b7fffa851882543036700ad)
 
 ### 4.2 name 属性
 
