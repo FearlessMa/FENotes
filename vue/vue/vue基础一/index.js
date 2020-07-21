@@ -94,6 +94,44 @@ const Child2 = {
             </div>`
 };
 
+// computed 计算属性
+const Computed = {
+  name: 'computed',
+  data() {
+    return { a: 'a', b: 'b', c: 'c', d: 'd' };
+  },
+  computed: {
+    // function this 指向 vm
+    ab() {
+      return this.a + this.b;
+    },
+    // 使用 getter 与 setter
+    cd: {
+      get() {
+        return this.c + this.d;
+      },
+      set(cd) {
+        this.c = 'c';
+        this.d += cd;
+      }
+    },
+    // 使用箭头函数
+    doubleA: (vm) => vm.a + vm.a
+  },
+  methods: {},
+  template: `<div>
+    <div>计算属性</div>
+    <div>ab:{{ab}}</div>
+    <div>doubleA:{{doubleA}}</div>
+    <div>
+      <div>c:{{this.c}}</div>
+      <div>d:{{this.d}}</div>
+      <div>cd:{{this.cd}}</div>
+      <button @click="cd = '123'">set cd='123'</button>
+    </div>
+  </div>`
+};
+
 const app = {
   // name 标识
   name: 'app',
@@ -101,7 +139,7 @@ const app = {
   // el: '#app',
 
   // 引用组件 多种方式
-  components: { Child, 'child-2': Child2 },
+  components: { Child, 'child-2':Child2, Computed },
 
   //  响应式数据 不推荐使用箭头函数 this指向问题
   data() {
@@ -128,7 +166,7 @@ const app = {
   template: `<div>
                 <div>{{msg}}</div>
                 <div>string</div>
-              <hr/>
+            <!-- <hr/>
               <div>
                 <Child pString="name" :pMsg="msg" :pRes="res" />
                 <button @click="onClick">btn</button>
@@ -136,7 +174,9 @@ const app = {
               <hr/>
               <div>
                 <child-2/>
-              </div>
+              </div> -->
+              <hr/>
+              <Computed/>
             </div>`
 };
 
@@ -147,18 +187,23 @@ const vm = new Vue(app);
 vm.$mount('#app');
 
 const options = {
-  el:'',
-  name:'name',
-  components:{},
+  //  一
+  el: '',
+  name: 'name',
+  components: {},
   data() {
     return {};
   },
-  props:[],
-  inject:[],
-  watch:{},
-  computed:{},
-  methods:{},
-  template:``,
-  render(h){return h()},
+  props: [],
+  inject: [],
+  watch: {},
+  computed: {},
+  methods: {},
+  template: ``,
+  render(h) {
+    return h();
+  },
   // other props 和 生命周期
+  // 二
+  computed: {}
 };

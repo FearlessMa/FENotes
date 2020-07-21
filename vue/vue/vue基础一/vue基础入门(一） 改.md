@@ -8,7 +8,7 @@
 
 ## 2. 安装vue
 
-- 新增`index.html`,`index.js`文件,引入`vue`的cdn。
+- 简单学习安装，新增`index.html`,`index.js`文件,引入`vue`的cdn。
 
     ```html
     <!DOCTYPE html>
@@ -39,7 +39,7 @@
     vm.$mount('#app');
     ```
 
-2. 在页面中我们会看到什么都没有，这是因为options没有描述视图的数据。options是由vue所提供的特定字段属性构成。简单分为2类，生命周期与其他属性。
+2. 页面会显示空白，这是因为options没有描述视图的数据。options是由vue所提供的特定字段属性构成。简单分为2类，生命周期与其他属性。
 
    ```js
    const options = {
@@ -62,8 +62,44 @@
 
 
 ## 4. 常用options
-TODO 解释.vue 与 options 
-### 4.1 el 
+<!-- TODO 解释.vue 与 options  -->
+在日常开发中会使用vue提供的webpack构建工具`vue-cli`来搭建vue脚手架，目前学习使用cdn方式快速体验，了解vue。
+1. `.vue`文件与options的对比
+| 类别    | 组成                                 | 模板                                                                                                                                |
+| :------ | :----------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
+| .vue    | .vue 由template,script,css三部分构成 | 由<template></template> 标签包裹的模板区域，由html和xml格式组成类似jsx。<script></script>包裹的js区域，<style></style>包裹的css区域 |
+| options | options是一个object                  | 由 template属性或render方法表示，属性值为支模板字符串,render方法返回值为VNode                                                       |
+代码举例
+```vue
+// .vue 文件
+<template>
+  <div class="color-red">这是.vue文件构成</div>
+</template>
+<script>
+// js逻辑
+export default {
+  name:'vue',
+  data(){return {}},
+}
+</script>
+<style>
+// css 样式
+.color-red{
+  color:red;
+}
+</style>
+```
+```js
+//  options 构成，class需要在css文件中定义
+const options ={
+  template:`<div class="color-red">只是options中模板</div>`,
+  name:'vueOptions',
+  data(){return {}}
+}
+```
+
+
+### 4.1 el 属性 
 
 - **类型**：`string | Element`
 
@@ -77,24 +113,24 @@ TODO 解释.vue 与 options
 
  如果在实例化时存在这个选项，实例将立即进入编译过程，否则，需要显式调用 `vm.$mount()` 手动开启编译。
 
- ```js
- // 生成vue实例vm
- const vm = new Vue({});
- 
- // 替换渲染id为app的dom
- vm.$mount('#app');
- 
- // 或者
- 
- const vm = new Vue({el:'#app'})
- ```
+```js
+// 方法1：
+//  生成vue实例vm
+const vm = new Vue({});
+
+// 替换渲染id为app的dom
+vm.$mount('#app');
+
+// 方法2：
+
+const vm = new Vue({el:'#app'})
+```
 
 > 总结
- 
- ​		把vm挂载到一个dom节点上，vm会替换当前dom节点，使用`el`参数 或者`vm.$mount()`挂载。
+>​ **把vm挂载到一个dom节点上，vm会替换当前dom节点，使用`el`参数 或者调用`vm.$mount()`挂载。**
 
-### 4.2 name
-  
+### 4.2 name 属性
+
 - **类型**：`string`
   
 - **限制**：只有作为组件选项时起作用。
@@ -104,32 +140,38 @@ TODO 解释.vue 与 options
   允许组件模板递归地调用自身。注意，组件在全局用 `Vue.component()` 注册时，全局 ID 自动作为组件的 name。
   
   指定 `name` 选项的另一个好处是便于调试。有名字的组件有更友好的警告信息。另外，当在有 [vue-devtools](https://github.com/vuejs/vue-devtools)，未命名组件将显示成 `<AnonymousComponent>`，这很没有语义。通过提供 `name` 选项，可以获得更有语义信息的组件树。
-    
-> 总结
-
-​		全局注册组件使用 name作为组件id，调试工具显示组件name。
   
-### 4.3 components 
+> 总结
+> **vm的表示符，全局注册组件使用,name作为组件id，调试工具显示组件name。**
+
+### 4.3 components 属性
 
 - **类型**：`object`
 
 - **详细**: 
+| 自定义组件 | 组件注册                                   | template中使用方法                                             |
+| ---------- | ------------------------------------------ | -------------------------------------------------------------- |
+| Child1     | 局部注册{components:{Child1:Child1}}       | <Child1/>或<Child1></Child1>或<child-1/>或 <child-1></child-1> |
+| Child1     | 全局注册 Vue.component(Child1.name,Child1) | 同上                                                           |
 
-  组件有两种**全局注册**和**局部注册**，components的内容就是`options`，
+组件有两种**全局注册**和**局部注册**，components的内容就是`options`，
 
-  全局注册需要使用Vue.component，局部注册options.components
+全局注册需要使用Vue.component，局部注册options.components
 
-  ````js
-  //局部注册
-    {
-      ...
-      // 引用组件 多种方式 Child,Child2两个组件
-      components: { Child:Child, 'child-2': Child2 },
-      ...
-    }
-  ````
+````js
+//局部注册
+  {
+    ...
+    // 引用组件 多种方式 Child,Child2两个组件
+    components: { Child:Child, 'child-2': Child2 },
+    ...
+  }
+````
 
-### 4.4 data
+> 总结
+> **组件注册分为全局和局部注册，全局注册以后，可以在任意模板内使用组件无需再次注册，局部注册后只能在注册的该组件内部使用**
+
+### 4.4 data 属性
 
 - **类型**：`Object | Function`
 
@@ -137,80 +179,82 @@ TODO 解释.vue 与 options
 
 - **详细**：
 
-  Vue 实例的数据对象。Vue 将会递归将 data 的 property 转换为 getter/setter，从而让 data 的 property 能够响应数据变化。**对象必须是纯粹的对象 (含有零个或多个的 key/value 对)**：浏览器 API 创建的原生对象，原型上的 property 会被忽略。大概来说，data 应该只能是数据 - 不推荐观察拥有状态行为的对象。
+Vue 实例的数据对象。Vue 将会递归将 data 的 property 转换为 getter/setter，从而让 data 的 property 能够响应数据变化。**对象必须是纯粹的对象 (含有零个或多个的 key/value 对)**：浏览器 API 创建的原生对象，原型上的 property 会被忽略。大概来说，data 应该只能是数据 - 不推荐观察拥有状态行为的对象。
 
-  一旦观察过，你就无法在根数据对象上添加响应式 property。因此推荐在创建实例之前，就声明所有的根级响应式 property。
+一旦观察过，你就无法在根数据对象上添加响应式 property。因此推荐在创建实例之前，就声明所有的根级响应式 property。
 
-  实例创建之后，可以通过 `vm.$data` 访问原始数据对象。Vue 实例也代理了 data 对象上所有的 property，因此访问 `vm.a` 等价于访问 `vm.$data.a`。
+实例创建之后，可以通过 `vm.$data` 访问原始数据对象。Vue 实例也代理了 data 对象上所有的 property，因此访问 `vm.a` 等价于访问 `vm.$data.a`。
 
-  以 `_` 或 `$` 开头的 property **不会**被 Vue 实例代理，因为它们可能和 Vue 内置的 property、API 方法冲突。你可以使用例如 `vm.$data._property` 的方式访问这些 property。
+以 `_` 或 `$` 开头的 property **不会**被 Vue 实例代理，因为它们可能和 Vue 内置的 property、API 方法冲突。你可以使用例如 `vm.$data._property` 的方式访问这些 property。
 
-  当一个**组件**被定义，`data` 必须声明为返回一个初始数据对象的函数，因为组件可能被用来创建多个实例。如果 `data` 仍然是一个纯粹的对象，则所有的实例将**共享引用**同一个数据对象！通过提供 `data` 函数，每次创建一个新实例后，我们能够调用 `data` 函数，从而返回初始数据的一个全新副本数据对象。
+当一个**组件**被定义，`data` 必须声明为返回一个初始数据对象的函数，因为组件可能被用来创建多个实例。如果 `data` 仍然是一个纯粹的对象，则所有的实例将**共享引用**同一个数据对象！通过提供 `data` 函数，每次创建一个新实例后，我们能够调用 `data` 函数，从而返回初始数据的一个全新副本数据对象。
 
-  如果需要，可以通过将 `vm.$data` 传入 `JSON.parse(JSON.stringify(...))` 得到深拷贝的原始数据对象。
+如果需要，可以通过将 `vm.$data` 传入 `JSON.parse(JSON.stringify(...))` 得到深拷贝的原始数据对象。
 
-  > **总结**：
+````js
+{
+//方式1  
+  data(){
+    return { 
+      msg: 'name is app',
+      count: 0,
+      res: { code: 0 } 
+    };  
+  }
+//方式2 不推荐使用
+  data:(vm)=>{return {a:vm.a}}
+}
+````
+> 总结
+> **1. data必须为返回一个`object`的`funtcion`,如果data为object则多个实例对象引用的data为同一个。**
+> **2. data返回的object将会被Vue观察，实现响应式数据，vm实例创建之后不能直接新增data的属性，如有需要通过`vm.$set`添加**
+> **3. `vm.prop = vm.$data.prop`**
 
-    1. data必须为返回一个`object`的`funtcion`,如果data为object则多个实例对象引用的data为同一个。
 
-      ````js
-      {
-      //方式1  
-        data(){
-          return { 
-            msg: 'name is app',
-            count: 0,
-            res: { code: 0 } 
-          };  
-        }
-      //方式2 不推荐使用 响应式数据 不推荐用箭头函数this指向问题
-        data:(vm)=>{return {a:vm.a}}
-      }
-      ````
+​    
 
-      
 
-    2. data返回的object将会被Vue观察，实现响应式数据，vm实例创建之后不能直接新增data的属性，如有需要通过`vm.$set`添加
 
-    3. `vm.prop = vm.$data.prop`
-
-### 4.5 props
+### 4.5 props 属性
 
 - **类型**：`Array<string> | Object`
 
 - **详细**：
 
-  props 可以是数组或对象，用于接收来自父组件的数据。props 可以是简单的数组，或者使用对象作为替代，对象允许配置高级选项，如类型检测、自定义验证和设置默认值。
+props 可以是数组或对象，用于接收来自父组件的数据。props 可以是简单的数组，或者使用对象作为替代，对象允许配置高级选项，如类型检测、自定义验证和设置默认值。
 
-  你可以基于对象的语法使用以下选项：
+你可以基于对象的语法使用以下选项：
 
-  - `type`：可以是下列原生构造函数中的一种：`String`、`Number`、`Boolean`、`Array`、`Object`、`Date`、`Function`、`Symbol`、任何自定义构造函数、或上述内容组成的数组。会检查一个 prop 是否是给定的类型，否则抛出警告。Prop 类型的[更多信息在此](https://cn.vuejs.org/v2/guide/components-props.html#Prop-类型)。
-  - `default`：`any`
-    为该 prop 指定一个默认值。如果该 prop 没有被传入，则换做用这个值。对象或数组的默认值必须从一个工厂函数返回。
-  - `required`：`Boolean`
-    定义该 prop 是否是必填项。在非生产环境中，如果这个值为 truthy 且该 prop 没有被传入的，则一个控制台警告将会被抛出。
-  - `validator`：`Function`
-    自定义验证函数会将该 prop 的值作为唯一的参数代入。在非生产环境下，如果该函数返回一个 falsy 的值 (也就是验证失败)，一个控制台警告将会被抛出。你可以在[这里](https://cn.vuejs.org/v2/guide/components-props.html#Prop-验证)查阅更多 prop 验证的相关信息。
+- `type`：可以是下列原生构造函数中的一种：`String`、`Number`、`Boolean`、`Array`、`Object`、`Date`、`Function`、`Symbol`、任何自定义构造函数、或上述内容组成的数组。会检查一个 prop 是否是给定的类型，否则抛出警告。Prop 类型的[更多信息在此](https://cn.vuejs.org/v2/guide/components-props.html#Prop-类型)。
+- `default`：`any`
+  为该 prop 指定一个默认值。如果该 prop 没有被传入，则换做用这个值。对象或数组的默认值必须从一个工厂函数返回。
+- `required`：`Boolean`
+  定义该 prop 是否是必填项。在非生产环境中，如果这个值为 truthy 且该 prop 没有被传入的，则一个控制台警告将会被抛出。
+- `validator`：`Function`
+  自定义验证函数会将该 prop 的值作为唯一的参数代入。在非生产环境下，如果该函数返回一个 falsy 的值 (也就是验证失败)，一个控制台警告将会被抛出。你可以在[这里](https://cn.vuejs.org/v2/guide/components-props.html#Prop-验证)查阅更多 prop 验证的相关信息。
 
-  ```js
-  //template  传递props
-    <Child pString="name" :pMsg="msg" :pRes="res" />
-  
-  // 接收父组件传递的props
-  {
-    props: ['pMsg', 'pString', 'pRes'],
+```js
+//template  传递props
+  <Child pString="name" :pMsg="msg" :pRes="res" />
+
+// 接收父组件传递的props
+{
+  props: ['pMsg', 'pString', 'pRes'],
+}
+  // props 另一种方式  可以设置类型验证 与 默认值 
+{
+  props: { pMsg: { type: String, default: 'default pMsg' } }
   }
-    // props 另一种方式  可以设置类型验证 与 默认值 
-  {
-    props: { pMsg: { type: String, default: 'default pMsg' } }
-    }
-  ```
+```
+| 方式   | 使用方法                                                  | 解释                                                         |
+| ------ | --------------------------------------------------------- | ------------------------------------------------------------ |
+| Array  | props:['pString','pMsg','pRes']                           | 使用数组方式确定引用的属性名称                               |
+| Object | props:{ pMsg: { type: String, default: 'default pMsg' } } | 使用对象方式确定引用属性名称，类型，默认值，有更高控制细粒度 |
 
-  > 总结
+> 总结
+> porps 是使用组件时在标签定义的属性，组件内部通过props这个key接收，如果不在prps中定义，组件内部不能通过`vm.prpsName`调用属性，可通过`vm.$attrs`获取			
 
-  ​			porps 是使用组件时在标签定义的属性，组件内部通过props这个key接收，如果不在prps中定义，组件内部不能通过`vm.prpsName`调用属性，可通过`vm.$attrs`获取			
-
-### 4.6 provide / inject
+### 4.6 provide / inject 数据
 
 - **类型**：
 
@@ -219,50 +263,51 @@ TODO 解释.vue 与 options
 
 - **详细**：
 
-  1. 简单理解，提供给后代组件依赖注入方式。任意后代组件都可以通过inject获取到provide提供的数据。
-  2. provide 提供的对象的属性值如果为基本类型不具有响应式，引用类型具有响应式功能。
+1. 简单理解，提供给后代组件依赖注入方式。任意后代组件都可以通过inject获取到provide提供的数据。
+2. provide 提供的对象的属性值如果为基本类型不具有响应式，引用类型具有响应式功能。
 
-  > 总结  参考 [vue组件通信](https://mp.weixin.qq.com/s?__biz=MzIwNDgxNTM1OA==&mid=2247483668&idx=1&sn=f069d721fd6a1332347cf479078da924&chksm=973b2f85a04ca6932f7035b3446cf8135544a0fa768ea90f4a2af2f9c4b728be587d2ad6ab40&token=786517297&lang=zh_CN#rd)
+> 总结  参考 [vue组件通信](https://mp.weixin.qq.com/s?__biz=MzIwNDgxNTM1OA==&mid=2247483668&idx=1&sn=f069d721fd6a1332347cf479078da924&chksm=973b2f85a04ca6932f7035b3446cf8135544a0fa768ea90f4a2af2f9c4b728be587d2ad6ab40&token=786517297&lang=zh_CN#rd)
+> https://mp.weixin.qq.com/s?__biz=MzIwNDgxNTM1OA==&mid=2247483668&idx=1&sn=f069d721fd6a1332347cf479078da924&chksm=973b2f85a04ca6932f7035b3446cf8135544a0fa768ea90f4a2af2f9c4b728be587d2ad6ab40&token=786517297&lang=zh_CN#rd
 
-  
 
-### 4.7 watch
+
+### 4.7 watch 属性
 
 - **类型**：`{ [key: string]: string | Function | Object | Array }`
 
 - **详细**：
 
- 一个对象，键是需要观察的表达式，值是对应回调函数。值也可以是方法名，或者包含选项的对象。Vue 实例将会在实例化时调用 `$watch()`，遍历 watch 对象的每一个 property。
+一个对象，键是需要观察的表达式，值是对应回调函数。值也可以是方法名，或者包含选项的对象。Vue 实例将会在实例化时调用 `$watch()`，遍历 watch 对象的每一个 property。
 
- ```js
-   // watch 监听数据的改变 props,data
-   watch: {
-     pMsg(newVal, oldVal) {
-       console.log('newVal: ', newVal);
-       console.log('oldVal: ', oldVal);
-     },
-     // 详细的监听设置
-     pRes: {
-       handler(newVal, oldVal) {
-         console.log('newVal:pString ', newVal);
-         console.log('oldVal:pString ', oldVal);
-       },
-       //  immediate 默认false 只有在属性改变时候才会被监听到 ，true 初始化时执行一次handler方法
-       immediate: true,
-       // 深度监听，引用类型 内部改变可被监听 ,res.code 改变会触发handler
-       deep: true
-     },
-     // 字符串实现监听引用类型的某一个属性
-     'pRes.code': {
-       handler(val, old) {
-         console.log('pRes.code old: ', old);
-         console.log('pRes.code newVal: ', val);
-       }
-     }
-   },
- ```
+```js
+  // watch 监听数据的改变 props,data
+  watch: {
+    pMsg(newVal, oldVal) {
+      console.log('newVal: ', newVal);
+      console.log('oldVal: ', oldVal);
+    },
+    // 详细的监听设置
+    pRes: {
+      handler(newVal, oldVal) {
+        console.log('newVal:pString ', newVal);
+        console.log('oldVal:pString ', oldVal);
+      },
+      //  immediate 默认false 只有在属性改变时候才会被监听到 ，true 初始化时执行一次handler方法
+      immediate: true,
+      // 深度监听，引用类型 内部改变可被监听 ,res.code 改变会触发handler
+      deep: true
+    },
+    // 字符串实现监听引用类型的某一个属性
+    'pRes.code': {
+      handler(val, old) {
+        console.log('pRes.code old: ', old);
+        console.log('pRes.code newVal: ', val);
+      }
+    }
+  },
+```
 
- > 总结
+> 总结
 
 1. watch可以监听一些数据的改变，如data，props。
 2. 被watch的属性需要有一个function 接收newVal，oldVal两个参数
