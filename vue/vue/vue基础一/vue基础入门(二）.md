@@ -160,12 +160,60 @@ const Functional = {
 - errorCaptured：当捕获一个来自子孙组件的错误时被调用。此钩子会收到三个参数：错误对象、发生错误的组件实例以及一个包含错误来源信息的字符串。此钩子可以返回 false 以阻止该错误继续向上传播。
 
 
-| 名称          | 可用数据                                               |
-| ------------- | ------------------------------------------------------ |
-| beforeCreate  | 无                                                     |
-| created       | data,props,watch,event可用                             |
-| beforeMount   | 同上                                                   |
-| mounted       | data,props,watch,event,$el属性可以（$attrs,$parent等） |
-| beforeUpdate  | 同上                                                   |
-| updated       | 同上                                                   |
-| beforeDestroy | 同上                                                   |
+| 名称          | 可用数据                                               | 阶段                                           |
+| ------------- | ------------------------------------------------------ | ---------------------------------------------- |
+| beforeCreate  | 无                                                     | 实例初始化完成,创建完成之前                    |
+| created       | data,props,watch,event可用                             | 实例创建完成                                   |
+| beforeMount   | 同上                                                   | 实例被挂载之前                                 |
+| mounted       | data,props,watch,event,$el属性可以（$attrs,$parent等） | 实例被挂载之后(异步请求常在此阶段发起)         |
+| beforeUpdate  | 同上                                                   | 实例被更新之前                                 |
+| updated       | 同上                                                   | 实例被更新之后                                 |
+| beforeDestroy | 同上                                                   | 实例被销毁之前(解除一些事件监听等释放内存操作) |
+
+
+```js
+// Life cycle
+const LifeCycle = {
+  data() {
+    return { msg: 'life cycle' };
+  },
+  props: ['a'],
+  beforeCreate() {
+    console.log(
+      'beforeCreate: 实例初始化完成,创建完成之前。无法获取 data,props,$开头属性'
+    );
+  },
+  created() {
+    console.log('created: 实例创建完成。可以获取data，props,$属性');
+  },
+  beforeMount() {
+    console.log('beforeMount: 实例被挂载之前 ');
+  },
+  // 做一些异步请求初始化数据
+  mounted() {
+    console.log('mounted: 实例被挂载之后');
+    this.msg = '1';
+  },
+  beforeUpdate() {
+    console.log('beforeUpdate: 实例被更新之前');
+  },
+  updated() {
+    console.log('updated:实例被更新之后 ');
+  },
+  // 解除一些绑定，事件绑定
+  beforeDestroy() {
+    console.log('beforeDestroy:实例被销毁之前 ');
+  },
+  template: `<div>{{msg}}</div>`
+};
+
+// 控制台显示执行结果
+// beforeCreate: 实例初始化完成,创建完成之前。无法获取 data,props,$开头属性
+// created: 实例创建完成。可以获取data，props,$属性
+// beforeMount: 实例被挂载之前 
+// mounted: 实例被挂载之后
+// beforeUpdate: 实例被更新之前
+// updated:实例被更新之后 
+// beforeDestroy:实例被销毁之前
+
+```
