@@ -3,6 +3,7 @@
 
 ### Features
 
+* t ([7b87198](https://github.com/FearlessMa/FENotes/commit/7b8719838b84d5ebaba3d24572bd736a9e1fca3e))
 * vue  life cycle ([bcc6da8](https://github.com/FearlessMa/FENotes/commit/bcc6da833b2cbb765d704bff2261d5d031c640db))
 * vue base 2 ([ceee353](https://github.com/FearlessMa/FENotes/commit/ceee3533c4ffec4a682a88a8294652ffc0495a2d))
 * vue 基础 ([f241a77](https://github.com/FearlessMa/FENotes/commit/f241a7738881c7468795b166f8ab2f3d76d5b25f))

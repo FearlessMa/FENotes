@@ -1,37 +1,21 @@
 language: node_js
 node_js:
   - 12
-install:
-  - npm install
-os:
-  - linux
-# script:
-#   - npm publish --access=public
+script:
+  - npm run build
 branches:
   only:
-    - master # 构建的分支
-# cache:
-#   directories:
-#   - node_modules # 依赖缓存的目录
-# before_install:
-# - export TZ='Asia/beijing'  # 设置时区
-# deploy:
-#   provider: npm
-#   skip_cleanup: true
-#   email: mahaichao1030@qq.com
-#   api_key: $NPM_TOKEN
-#   on:
-#     branch: master
-
-script:
-- npm run  build
+  - master    # 构建的分支
+cache:
+  directories:
+  - node_modules # 依赖缓存的目录
+before_install:
+- export TZ='Asia/beijing'  # 设置时区
 deploy:
   provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN # github 上的token环境变量
-  local-dir: ./_book/ ## 根据情况自定义到静态文件输出目录
+  skip_cleanup: true
+  local_dir: dist
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   target-branch: gh-pages
-  verbose: true
   on:
     branch: master
-
