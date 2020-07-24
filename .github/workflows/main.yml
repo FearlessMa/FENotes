@@ -4,13 +4,13 @@
     # GitHub repository where assets will be deployed (default current)
     repo: # optional
     # Git branch where assets will be deployed
-    target_branch: # optional, default is gh-pages
+    target_branch: master # optional, default is gh-pages
     # Create incremental commit instead of doing push force
     keep_history: # optional, default is false
     # Allow an empty commit to be created
     allow_empty_commit: # optional, default is true
     # Build directory to deploy
-    build_dir: 
+    build_dir: dist
     # The committer name and email address
     committer: # optional
     # The author name and email address
