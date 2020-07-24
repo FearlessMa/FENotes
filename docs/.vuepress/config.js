@@ -2,6 +2,7 @@ module.exports = {
   title: 'FENotes',
   description: 'FENotes',
   dest: './dist',
+  // base: './',
   themeConfig: {
     editLinks: false,
     // 假如文档不是放在仓库的根目录下：
