@@ -67,6 +67,7 @@ const Directives = {
   </div>`
 };
 
+// 函数式
 const Functional = {
   functional: true,
   props: ['msg'],
@@ -77,6 +78,43 @@ const Functional = {
   }
 };
 
+// Life cycle
+const LifeCycle = {
+  data() {
+    return { msg: 'life cycle' };
+  },
+  props: ['a'],
+  beforeCreate() {
+    console.log(
+      'beforeCreate: 实例初始化完成,创建完成之前。无法获取 data,props,$开头属性'
+    );
+    // console.log('beforeCreate:msg ', this.msg);
+  },
+  created() {
+    console.log('created: 实例创建完成。可以获取data，props,$属性');
+    // console.log('created:msg ', this.msg);
+    // console.log('created:a ', this.a);
+    // console.log('created:$props ', this.$props);
+  },
+  beforeMount() {
+    console.log('beforeMount: 实例被挂载之前 ');
+  },
+  mounted() {
+    console.log('mounted: 实例被挂载之后');
+    this.msg = '1';
+  },
+  beforeUpdate() {
+    console.log('beforeUpdate: 实例被更新之前');
+  },
+  updated() {
+    console.log('updated:实例被更新之后 ');
+  },
+  beforeDestroy() {
+    console.log('beforeDestroy:实例被销毁之前 ');
+  },
+  template: `<div>{{msg}}</div>`
+};
+
 const app = {
   // name 标识
   name: 'app',
@@ -84,11 +122,11 @@ const app = {
   // el: '#app',
 
   // 引用组件 多种方式
-  components: { Computed, Directives, Functional },
+  components: { Computed, Directives, Functional, LifeCycle },
 
   //  响应式数据 不推荐使用箭头函数 this指向问题
   data() {
-    return { msg: 'name is app', count: 0, res: { code: 0 } };
+    return { msg: 'name is app', count: 0, res: { code: 0 }, visible: true };
   },
 
   // methods 里方法不能使用箭头函数 this指向问题
@@ -97,6 +135,9 @@ const app = {
       console.log('onClick');
       this.msg = 'onClick';
       this.res.code = 1;
+    },
+    toggleLifeCycle() {
+      this.visible = !this.visible;
     }
   },
   // template:'#app-template'
@@ -117,6 +158,9 @@ const app = {
               <Directives/>
               <hr/>
               <Functional msg="传递的props" />
+              <hr/>
+              <LifeCycle v-if="visible" a="传递prop"/>
+              <button @click="toggleLifeCycle">销毁 LifeCycle 组件</button>
             </div>`
 };
 

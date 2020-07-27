@@ -145,7 +145,7 @@ const Functional = {
 > 函数式组件，简单理解无状态组件。所有属性都是通过外部传递，内部不维护任何状态。有点逻辑简单只负责渲染，组件渲染消耗小（无需维护状态，生命周期等）。
 > [函数式组件](https://cn.vuejs.org/v2/guide/render-function.html#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6 "函数式组件")
 
-## 生命周期
+## 2.生命周期
 
 ![生命周期图](https://imgkr.cn-bj.ufileos.com/6557088e-0119-4957-9264-e1835d5a9dc3.png)
 

@@ -8,6 +8,7 @@
 * vue 基础入门(一) ([bcbe9f1](https://github.com/FearlessMa/FENotes/commit/bcbe9f144c2bc631d640d2060ecabddfcfa2acfc))
 * vue 组件通信 ([0b7d4af](https://github.com/FearlessMa/FENotes/commit/0b7d4af80d6e85ceeae64bf584551dfd86c6b709))
 * vue基础入门一修改 ([5b2b38f](https://github.com/FearlessMa/FENotes/commit/5b2b38ff86768847a0c9511bb8bc8c2bd6a22b8d))
+* 修改vue基础入门二格式 ([4a61606](https://github.com/FearlessMa/FENotes/commit/4a61606e976c5b63ce1a5020a58de06ac67a1f4f))
 
 
 
