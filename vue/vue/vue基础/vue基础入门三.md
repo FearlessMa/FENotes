@@ -8,8 +8,9 @@
 
 - 详细：
 
+```
 更新元素的 textContent。如果要更新部分的 textContent，需要使用 {{ Mustache }} 插值。
-
+```
 - 示例
 
 ```js
@@ -44,7 +45,7 @@ const vText = {
 
 在网站上动态渲染任意 HTML 是非常危险的，因为容易导致 XSS 攻击。只在可信内容上使用 v-html，永不用在用户提交的内容上。
 
-在单文件组件里，scoped 的样式不会应用在 v-html 内部，因为那部分 HTML 没有被 Vue 的模板编译器处理。如果你希望针对 v-html 的内容设置带作用域的 CSS，你可以替换为 CSS Modules 或用一个额外的全局 <style> 元素手动设置类似 BEM 的作用域策略。
+在单文件组件里，scoped 的样式不会应用在 v-html 内部，因为那部分 HTML 没有被 Vue 的模板编译器处理。如果你希望针对 v-html 的内容设置带作用域的 CSS，你可以替换为 CSS Modules 或用一个额外的全局  元素手动设置类似 BEM 的作用域策略。
 
 - 示例
 
@@ -102,7 +103,7 @@ const vShow = {
 
 - 用法：
 
-根据表达式的值的 truthiness 来有条件地渲染元素。在切换时元素及它的数据绑定 / 组件被销毁并重建。如果元素是 <template>，将提出它的内容作为条件块。
+根据表达式的值的 truthiness 来有条件地渲染元素。在切换时元素及它的数据绑定 / 组件被销毁并重建。如果元素是 `<template>`，将提出它的内容作为条件块。
 
 当条件变化时该指令触发过渡效果。
 
@@ -370,7 +371,7 @@ const vBind = {
 | ------ | --------------------------------------------------------------------------------------------------- |
 | .prop  | 作为一个 DOM property 绑定而不是作为 attribute 绑定,转化为原生html标签上属性。如：disabled，style等 |
 | .camel | 将-链接属性转化为驼峰属性。 如：class-name 转为 className                                           |
-| .sync  | 绑定更新事件update。如 <div :val.sync="val" > , <div :val="val" @update:val="newVal=>val=newVal">   |
+| .sync  | 绑定更新事件update。如 `<div :val.sync="val" > `, `<div :val="val" @update:val="newVal=>val=newVal">`   |
 
 > 总结
 > v-bind 属性绑定，父子单向传递数据的基础指令。
@@ -387,7 +388,7 @@ const vBind = {
   `<select>`
 
   `<textarea>`
-  
+
   `components`
 
 - 修饰符：
@@ -449,4 +450,4 @@ const vModel = {
 > 总结
 > v-model 一般表单组件使用，不用手动更新数据。
 > .lazy 把input 事件 替换成 change 事件。input 与change 触发时机不一样。change是光标离开input触发，input是输入值改变触发。使用change可以减少方法执行次数。
-> 组件使用v-model，例如：<Child v-model="d1"/> 相当于  <Child :d1="d1" @input="newVal=>d1=newVal"/>，组件内部要实现 this.$emit('input', e.target.value);
+> 组件使用v-model，例如：`<Child v-model="d1"/>` 相当于  `<Child :d1="d1" @input="newVal=>d1=newVal"/>`，组件内部要实现 this.$emit('input', e.target.value);
