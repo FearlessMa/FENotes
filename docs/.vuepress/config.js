@@ -26,7 +26,8 @@ module.exports = {
             children: [
               // ['/vue/vueBase/', '目录'], 
             '/vue/vueBase/vue基础入门一',
-            '/vue/vueBase/vue基础入门二'
+            '/vue/vueBase/vue基础入门二',
+            '/vue/vueBase/vue基础入门三'
           ]
           },
           {
