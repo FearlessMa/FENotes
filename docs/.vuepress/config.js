@@ -2,11 +2,11 @@ module.exports = {
   title: 'FENotes',
   description: 'FENotes',
   dest: './dist',
-  // base: '/',
+  base: '/FENotes/',
   themeConfig: {
     editLinks: false,
     // 假如文档不是放在仓库的根目录下：
-    docsDir: 'docs',
+    // docsDir: 'docs',
     // 假如文档放在一个特定的分支下：
     docsBranch: 'master',
     // sidebar: 'auto'
