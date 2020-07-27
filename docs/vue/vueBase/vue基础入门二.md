@@ -143,7 +143,7 @@ const Functional = {
 > [函数式组件](https://cn.vuejs.org/v2/guide/render-function.html#%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6)
 
 
-## 生命周期
+## 2.生命周期
 
 ![生命周期图](https://cn.vuejs.org/images/lifecycle.png)
 

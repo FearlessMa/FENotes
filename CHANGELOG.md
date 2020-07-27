@@ -1,6 +1,11 @@
 # 1.0.0 (2020-07-27)
 
 
+### Bug Fixes
+
+* path bug ([bf14858](https://github.com/FearlessMa/FENotes/commit/bf148581aa7ae86cc4738802d77f2aa77adbd1e8))
+
+
 ### Features
 
 * t ([7b87198](https://github.com/FearlessMa/FENotes/commit/7b8719838b84d5ebaba3d24572bd736a9e1fca3e))
