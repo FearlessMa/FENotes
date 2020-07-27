@@ -1,14 +1,25 @@
 # 1.0.0 (2020-07-27)
 
 
+### Bug Fixes
+
+* path bug ([bf14858](https://github.com/FearlessMa/FENotes/commit/bf148581aa7ae86cc4738802d77f2aa77adbd1e8))
+* 显示bug fix ([b769194](https://github.com/FearlessMa/FENotes/commit/b769194f922e56cea61c4238ceff0828f3eba279))
+
+
 ### Features
 
+* t ([7b87198](https://github.com/FearlessMa/FENotes/commit/7b8719838b84d5ebaba3d24572bd736a9e1fca3e))
+* vue  life cycle ([bcc6da8](https://github.com/FearlessMa/FENotes/commit/bcc6da833b2cbb765d704bff2261d5d031c640db))
 * vue base 2 ([ceee353](https://github.com/FearlessMa/FENotes/commit/ceee3533c4ffec4a682a88a8294652ffc0495a2d))
 * vue 基础 ([f241a77](https://github.com/FearlessMa/FENotes/commit/f241a7738881c7468795b166f8ab2f3d76d5b25f))
 * vue 基础入门(一) ([bcbe9f1](https://github.com/FearlessMa/FENotes/commit/bcbe9f144c2bc631d640d2060ecabddfcfa2acfc))
+* vue 基础入门三 ([4455a47](https://github.com/FearlessMa/FENotes/commit/4455a47ee188ef8730e575d7fe7279178cfb6a24))
 * vue 组件通信 ([0b7d4af](https://github.com/FearlessMa/FENotes/commit/0b7d4af80d6e85ceeae64bf584551dfd86c6b709))
+* vuepress ([c6cbcbb](https://github.com/FearlessMa/FENotes/commit/c6cbcbbbdd1ba35f944fd2cdade7b963f111db03))
 * vue基础入门一修改 ([5b2b38f](https://github.com/FearlessMa/FENotes/commit/5b2b38ff86768847a0c9511bb8bc8c2bd6a22b8d))
 * 修改vue基础入门二格式 ([4a61606](https://github.com/FearlessMa/FENotes/commit/4a61606e976c5b63ce1a5020a58de06ac67a1f4f))
+* 更新基础二 ([74287f4](https://github.com/FearlessMa/FENotes/commit/74287f4d6a72daf987798c1edf587ec153b466e9))
 
 
 
