@@ -11,7 +11,7 @@ module.exports = {
     // 假如文档放在一个特定的分支下：
     docsBranch: 'master',
     // sidebar: 'auto',
-    lastUpdated: 'Last Updated', // string | boolean
+    // lastUpdated: 'Last Updated', // string | boolean
     smoothScroll: true,
     sidebar: [
       {
@@ -27,7 +27,8 @@ module.exports = {
               // ['/vue/vueBase/', '目录'], 
             '/vue/vueBase/vue基础入门一',
             '/vue/vueBase/vue基础入门二',
-            '/vue/vueBase/vue基础入门三'
+            '/vue/vueBase/vue基础入门三',
+            '/vue/vueBase/vue基础入门四',
           ]
           },
           {

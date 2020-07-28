@@ -4,6 +4,7 @@
 ### Bug Fixes
 
 * path bug ([bf14858](https://github.com/FearlessMa/FENotes/commit/bf148581aa7ae86cc4738802d77f2aa77adbd1e8))
+* 修改 vue基础三编号 ([655ef81](https://github.com/FearlessMa/FENotes/commit/655ef816ef5edd7c7c743be29a082f9c5cba499e))
 * 显示bug fix ([b769194](https://github.com/FearlessMa/FENotes/commit/b769194f922e56cea61c4238ceff0828f3eba279))
 
 

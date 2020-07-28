@@ -1,6 +1,6 @@
 # vue基础入门（三）
 
-## 1. 指令
+## 1.指令
 
 ### 1.1 v-text
 
@@ -584,7 +584,7 @@ const vPre = {
 
 
 
-## 2. 自定义指令
+## 2.自定义指令
 
 [参考vue基础入门二](https://github.com/FearlessMa/FENotes/blob/master/docs/vue/vueBase/vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E4%BA%8C.md)
 
