@@ -417,3 +417,7 @@ var MyComponent = Vue.component('my-component')
 该方法需要在调用 new Vue() 之前被调用。
 
 当 install 方法被同一个插件多次调用，插件将只会被安装一次。
+
+
+
+![关注不迷路](https://imgkr.cn-bj.ufileos.com/1fdcd04b-dc7d-47f3-8949-85abbc8a25f3.png)

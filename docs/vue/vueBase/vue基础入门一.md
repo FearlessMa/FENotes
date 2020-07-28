@@ -560,3 +560,6 @@ vm.$mount('#app');
 > 参考资料
 >
 > [vueAPI](https://cn.vuejs.org/v2/api/#全局配置 "vueAPI") > [实例代码](https://github.com/FearlessMa/FENotes/tree/master/vue/vue "实例代码")
+
+
+![关注不迷路](https://imgkr.cn-bj.ufileos.com/1fdcd04b-dc7d-47f3-8949-85abbc8a25f3.png)
