@@ -32,7 +32,7 @@ const vText = {
 ```
 
 > 总结
-> `v-text` 绑定与 `{{}}`绑定相同，习惯常用`{{}}`
+> 1. `v-text` 绑定与 `{{}}`绑定相同，习惯常用`{{}}`
 
 
 ### 1.2 v-html
@@ -62,7 +62,7 @@ const vHtml = {
 ```
 
 > 总结
-> 尽量使用vue组件实现模板，特殊情况会用到使用场景，比如 富文本编辑器返回html字符串在预览下可以使用v-html渲染富文本编辑器返回的字符串
+> 1. 尽量使用vue组件实现模板，特殊情况会用到使用场景，比如 富文本编辑器返回html字符串在预览下可以使用v-html渲染富文本编辑器返回的字符串
 
 
 ### 1.3 v-show
@@ -91,10 +91,10 @@ const vShow = {
 ```
 
 > 总结
-> v-show 通过切换css属性 display 来控制标签的显示隐藏，
-> 不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换。
-> 带有 v-show 的元素始终会被渲染并保留在 DOM 中
-> v-show 不会触发组件销毁相关生命周期
+> 1. `v-show`通过切换css属性 display 来控制标签的显示隐藏，
+> 2. 不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换。
+> 3. 带有 `v-show` 的元素始终会被渲染并保留在 DOM 中
+> 4. `v-show` 不会触发组件销毁相关生命周期
 
 
 ### 1.4 v-if,v-else-if,v-else
@@ -127,10 +127,10 @@ const vIf = {
 ```
 
 > 总结
-> v-if 是“真正”的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建。 
-> v-if 也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。
-> 使用if,else逻辑控制html标签的显示隐藏
-> v-else-if,v-else限制前一兄弟元素必须有 v-if 或 v-else-if。
+> 1. `1v-i` 是“真正”的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建。 
+> 2. `v-if` 也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。
+> 3. 使用if,else逻辑控制html标签的显示隐藏
+> 4.` v-else-if`,`v-else`限制前一兄弟元素必须有 `v-if` 或 `v-else-if`。
 
 
 ### 1.5 v-for
@@ -165,8 +165,8 @@ const vFor = {
 ```
 
 > 总结
-> v-for 可以遍历所有Iterable接口的数据。
-> Vue 2.x 目前并不支持可响应的 Map 和 Set 值，所以无法自动探测变更
+> 1. `v-for` 可以遍历所有Iterable接口的数据。
+> 2. Vue 2.x 目前并不支持可响应的 Map 和 Set 值，所以无法自动探测变更
 
 
 ### 1.6 v-on
@@ -294,8 +294,8 @@ const vOn = {
 
 
 > 总结
-> `v-on`在标签上绑定事件，简写`@`
-> 事件修饰符可以简化常用操作，事件修饰符可以串联使用。
+> 1. `v-on`在标签上绑定事件，简写`@`
+> 2. 事件修饰符可以简化常用操作，事件修饰符可以串联使用。
 
 [.passive参考](https://blog.csdn.net/wangjun5159/article/details/104251705)
 [.exact参考](https://cn.vuejs.org/v2/guide/events.html#exact-%E4%BF%AE%E9%A5%B0%E7%AC%A6)
@@ -367,14 +367,14 @@ const vBind = {
 
 - 修饰符
 
-| 修饰符 | 作用                                                                                                |
-| ------ | --------------------------------------------------------------------------------------------------- |
-| .prop  | 作为一个 DOM property 绑定而不是作为 attribute 绑定,转化为原生html标签上属性。如：disabled，style等 |
-| .camel | 将-链接属性转化为驼峰属性。 如：class-name 转为 className                                           |
-| .sync  | 绑定更新事件update。如 `<div :val.sync="val" > `, `<div :val="val" @update:val="newVal=>val=newVal">`   |
+| 修饰符 | 作用                                                                                                  |
+| ------ | ----------------------------------------------------------------------------------------------------- |
+| .prop  | 作为一个 DOM property 绑定而不是作为 attribute 绑定,转化为原生html标签上属性。如：disabled，style等   |
+| .camel | 将-链接属性转化为驼峰属性。 如：class-name 转为 className                                             |
+| .sync  | 绑定更新事件update。如 `<div :val.sync="val" > `, `<div :val="val" @update:val="newVal=>val=newVal">` |
 
 > 总结
-> v-bind 属性绑定，父子单向传递数据的基础指令。
+> 1. `v-bind` 属性绑定，父子单向传递数据的基础指令。
 
 
 ### 1.8 v-model
@@ -448,6 +448,144 @@ const vModel = {
 ```
 
 > 总结
-> v-model 一般表单组件使用，不用手动更新数据。
-> .lazy 把input 事件 替换成 change 事件。input 与change 触发时机不一样。change是光标离开input触发，input是输入值改变触发。使用change可以减少方法执行次数。
-> 组件使用v-model，例如：`<Child v-model="d1"/>` 相当于  `<Child :d1="d1" @input="newVal=>d1=newVal"/>`，组件内部要实现 this.$emit('input', e.target.value);
+> 1. `v-model` 一般表单组件使用，不用手动更新数据。
+> 2. `.lazy` 把input 事件 替换成 change 事件。input 与change 触发时机不一样。change是光标离开input触发，input是输入值改变触发。使用change可以减少方法执行次数。
+> 3. 组件使用v-model，例如：`<Child v-model="d1"/>` 相当于  `<Child :d1="d1" @input="newVal=>d1=newVal"/>`，组件内部要实现 this.$emit('input', e.target.value);
+
+
+### 1.9 v-slot
+
+- 缩写：#
+
+- 预期：可放置在函数参数位置的 JavaScript 表达式 (在支持的环境下可使用解构)。可选，即只需要在为插槽传入 prop 的时候使用。
+
+- 参数：插槽名 (可选，默认值是 default)
+
+  限用于
+
+  `<template>`组件 (对于一个单独的带 prop 的默认插槽)
+
+- 示例：
+  
+```js
+//  组件插槽，可以理解为：组件嵌套
+const vSlot = {
+  data() {
+    return { data: { des: 'vSlot的data数据', num: 6 } };
+  },
+  template: `<div>
+  v-slot 使用
+  <div>
+    <div>默认插槽,名称为default的具名插槽</div>
+    <hr/>
+    <slot></slot>
+  </div>
+  <div>
+    <br/>
+    <div>自定义名称为foot的插槽</div>
+    <hr/>
+    <div>
+      <slot name="header"></slot>
+    </div>
+    <hr/>
+    <div>
+      <slot name="footer"></slot>
+    </div>
+  </div>
+  <div>
+    <br/>
+    <div>传递参数的插槽</div>
+    <hr/>
+    <slot name="params" :data="data"></slot>
+  </div>
+  </div>`
+};
+```
+
+```html
+ <vSlot>
+   <!-- 会渲染到vSlot组件的<slot></slot>标签中 -->
+  <div>传的的默认插槽</div>
+  <!-- 会渲染到vSlot组件的<slot name="header" ></slot>标签中 -->
+  <template #header>#header方式传递具名插槽</template>
+  <!-- 会渲染到vSlot组件的<slot name="footer" ></slot>标签中 -->
+  <template v-slot:footer>v-slot:footer 传递具名插槽</template>
+  <!-- 会渲染到vSlot组件的<slot name="params" :data="data" ></slot>标签中 -->
+  <template #params="props">
+    <div>传递参数的具名插槽#params</div>
+    <!-- 获取到的数据 props：{"data":{"des":"vSlot的data数据","num":6}}  -->
+    <div>props：{{JSON.stringify(props)}}</div>
+  </template>
+</vSlot>
+```
+
+::: v-pre
+
+| 组件  | 插槽                              | 组件内定义                                 | 使用                                                                                                                          |
+| ----- | --------------------------------- | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| vSlot | 默认插槽，名称default             | `<slot></slot>`                            | `<vSlot><div>传的的默认插槽</div></vSlot>` vSlot内所有为标明其他插槽的内容都会渲染到`<slot></slot>`内部                       |
+| vSlot | 具名插槽，定义name="xxx"          | `<slot name="header"></slot>`              | `<template #header>#header方式传递具名插槽</template>` 内部所有内容会渲染到对应的name插槽中                                   |
+| vSlot | 具名插槽，传递props给插槽内容使用 | `<slot name="params" :data="data"></slot>` | `<template #params="props">` `<div>props：{{JSON.stringify(props)}}</div>` `</template>`插槽内部渲染内容可以获得vSlot组件传递的数据 |
+
+:::
+
+
+> 总结
+> 1. 通过`slot`定义插槽。默认`name`为`default`，可以给`slot`标签绑定数据使渲染内容获得相关数据。
+> 2. 插槽一般通过 `template`标签使用 `#` `slotName`指定渲染的插槽名称。`#` `slotName` = `props` 获取`slot`标签上绑定的数据
+> [vue插槽](https://cn.vuejs.org/v2/guide/components-slots.html)
+
+
+### 2.0 v-pre
+
+- 不需要表达式
+
+- 用法：
+
+跳过这个元素和它的子元素的编译过程。可以用来显示原始 `Mustache` 标签。跳过大量没有指令的节点会加快编译。
+
+```js
+const vPre = {
+  data(){return {data:'123'}},
+  template:`<div>
+    v-pre 使用
+    <div v-pre> {{data}} <div>div标签</div></div>
+    <div>预计上面渲染结果data会渲染为123。实际不是</div>
+  </div>`
+}
+```
+
+> 总结
+> 1. `v-pre` 跳过编译，上面例子直接渲染为 {{`data`}}
+
+
+### 2.1 v-cloak
+
+- 不需要表达式
+
+- 用法：
+
+这个指令保持在元素上直到关联实例结束编译。和 CSS 规则如 [v-cloak] { display: none } 一起用时，这个指令可以隐藏未编译的 Mustache 标签直到实例准备完毕。
+
+> 总结
+> 1. `v-cloak` 是在当`Vue` 来不及渲染，页面会显示{{`data`}}这种Mustache源码，`v-cloak`可以隐藏这种显示。
+
+
+### 2.2 v-once
+
+- 不需要表达式
+
+- 详细：
+
+只渲染元素和组件一次。随后的重新渲染，元素/组件及其所有的子节点将被视为静态内容并跳过。这可以用于优化更新性能。
+
+> 总结
+> 1. 有大量静态内容需要渲染的时候，可以使用`v-once`缓存第一次渲染结果，优化性能
+
+
+
+## 2. 自定义指令
+
+[参考vue基础入门二](https://github.com/FearlessMa/FENotes/blob/master/docs/vue/vueBase/vue%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%E4%BA%8C.md)
+
+

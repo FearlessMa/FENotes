@@ -244,6 +244,74 @@ const vModel = {
   </div>`
 };
 
+//  组件插槽，可以理解为：组件嵌套
+const vSlot = {
+  data() {
+    return { data: { des: 'vSlot的data数据', num: 6 } };
+  },
+  template: `<div>
+  v-slot 使用
+  <div>
+    <div>默认插槽,名称为default的具名插槽</div>
+    <hr/>
+    <slot></slot>
+  </div>
+  <div>
+    <br/>
+    <div>自定义名称为foot的插槽</div>
+    <hr/>
+    <div>
+      <slot name="header"></slot>
+    </div>
+    <hr/>
+    <div>
+      <slot name="footer"></slot>
+    </div>
+  </div>
+  <div>
+    <br/>
+    <div>传递参数的插槽</div>
+    <hr/>
+    <slot name="params" :data="data"></slot>
+  </div>
+  </div>`
+};
+// https://cn.vuejs.org/v2/guide/components-slots.html
+
+
+const vPre = {
+  data(){return {data:'123'}},
+  template:`<div>
+    v-pre 使用
+    <div v-pre> {{data}} <div>div标签</div></div>
+    <div>预计上面渲染结果data会渲染为123。实际不是</div>
+  </div>`
+}
+
+
+const vCloak = {
+  data(){
+    return {data:'123'}
+  },
+  template:`<div v-cloak>{{data}}</div>`
+}
+
+
+const vOnce = {
+  props:['p'],
+  data(){
+    return {msg:'v-once'}
+  },
+  template:`<div>
+    v-once 使用
+    <div>{{msg}}</div>
+    <div>p：{{p}}</div>
+  </div>`,
+  mounted(){
+    console.log('msg',this.msg)
+  }
+}
+
 const app = {
   // name 标识
   name: 'app',
@@ -260,7 +328,11 @@ const app = {
     vFor,
     vOn,
     vBind,
-    vModel
+    vModel,
+    vSlot,
+    vPre,
+    vCloak,
+    vOnce
   },
 
   //  响应式数据 不推荐使用箭头函数 this指向问题
@@ -294,11 +366,27 @@ const app = {
               <vFor/>
               <hr/>
               <vOn/>
-                -->
               <hr/>
               <vBind/>
               <hr/>
               <vModel/>
+              -->
+              <hr/>
+              <vSlot>
+                <div>传的的默认插槽</div>
+                <template #header>#header方式传递具名插槽</template>
+                <template v-slot:footer>v-slot:footer 传递具名插槽</template>
+                <template #params="props">
+                  <div>传递参数的具名插槽#params</div>
+                  <div>props：{{JSON.stringify(props)}}</div>
+                </template>
+              </vSlot>
+              <hr/>
+              <vPre/>
+              <hr/>
+              <vCloak/>
+              <hr/>
+              <vOnce :p="count" @click.native.self="count++" />
             </div>`
 };
 

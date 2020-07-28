@@ -158,7 +158,7 @@ const vm = new Vue({el:'#app'})
 
 | 自定义组件 | 组件注册                                   | template 中使用方法                                            |
 | ---------- | ------------------------------------------ | -------------------------------------------------------------- |
-| Child1     | 局部注册{components:{Child1:Child1}}       | <Child1/>或<Child1></Child1>或<child-1/>或 <child-1></child-1> |
+| Child1     | 局部注册{components:{Child1:Child1}}       |`<Child1/>或<Child1></Child1>或<child-1/>或 <child-1></child-1>` |
 | Child1     | 全局注册 Vue.component(Child1.name,Child1) | 同上                                                           |
 
 组件有两种**全局注册**和**局部注册**，components 的内容就是`options`，
