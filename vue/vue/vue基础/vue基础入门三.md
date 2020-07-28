@@ -130,7 +130,7 @@ const vIf = {
 > 1. `1v-i` 是“真正”的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建。 
 > 2. `v-if` 也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。
 > 3. 使用if,else逻辑控制html标签的显示隐藏
-> 4.` v-else-if`,`v-else`限制前一兄弟元素必须有 `v-if` 或 `v-else-if`。
+> 4. `v-else-if`,`v-else`限制前一兄弟元素必须有 `v-if` 或 `v-else-if`。
 
 
 ### 1.5 v-for
@@ -536,7 +536,7 @@ const vSlot = {
 > [vue插槽](https://cn.vuejs.org/v2/guide/components-slots.html)
 
 
-### 2.0 v-pre
+### 1.10 v-pre
 
 - 不需要表达式
 
@@ -559,7 +559,7 @@ const vPre = {
 > 1. `v-pre` 跳过编译，上面例子直接渲染为 {{`data`}}
 
 
-### 2.1 v-cloak
+### 1.11 v-cloak
 
 - 不需要表达式
 
@@ -571,7 +571,7 @@ const vPre = {
 > 1. `v-cloak` 是在当`Vue` 来不及渲染，页面会显示{{`data`}}这种Mustache源码，`v-cloak`可以隐藏这种显示。
 
 
-### 2.2 v-once
+### 1.12 v-once
 
 - 不需要表达式
 
