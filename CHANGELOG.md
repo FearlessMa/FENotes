@@ -16,6 +16,7 @@
 * vue 基础 ([f241a77](https://github.com/FearlessMa/FENotes/commit/f241a7738881c7468795b166f8ab2f3d76d5b25f))
 * vue 基础入门(一) ([bcbe9f1](https://github.com/FearlessMa/FENotes/commit/bcbe9f144c2bc631d640d2060ecabddfcfa2acfc))
 * vue 基础入门三 ([4455a47](https://github.com/FearlessMa/FENotes/commit/4455a47ee188ef8730e575d7fe7279178cfb6a24))
+* vue 基础四 完成 ([ba0f4e6](https://github.com/FearlessMa/FENotes/commit/ba0f4e616ffbec431543516eb5de640937aa6394))
 * vue 组件通信 ([0b7d4af](https://github.com/FearlessMa/FENotes/commit/0b7d4af80d6e85ceeae64bf584551dfd86c6b709))
 * vuepress ([c6cbcbb](https://github.com/FearlessMa/FENotes/commit/c6cbcbbbdd1ba35f944fd2cdade7b963f111db03))
 * vue基础三 ([28eacdf](https://github.com/FearlessMa/FENotes/commit/28eacdff64ed4af936a0a4d7a2659a630de87390))

@@ -29,6 +29,7 @@ module.exports = {
             '/vue/vueBase/vue基础入门二',
             '/vue/vueBase/vue基础入门三',
             '/vue/vueBase/vue基础入门四',
+            '/vue/vueBase/vue基础入门五',
           ]
           },
           {
