@@ -1,4 +1,4 @@
-# 1.0.0 (2020-07-28)
+# 1.0.0 (2020-07-29)
 
 
 ### Bug Fixes
@@ -22,6 +22,7 @@
 * vue基础入门一修改 ([5b2b38f](https://github.com/FearlessMa/FENotes/commit/5b2b38ff86768847a0c9511bb8bc8c2bd6a22b8d))
 * vue基础四 ([360a00b](https://github.com/FearlessMa/FENotes/commit/360a00b658eabb47dd6347103d981747c2b984d8))
 * 修改vue基础入门二格式 ([4a61606](https://github.com/FearlessMa/FENotes/commit/4a61606e976c5b63ce1a5020a58de06ac67a1f4f))
+* 增加图片 ([d5c4cd3](https://github.com/FearlessMa/FENotes/commit/d5c4cd3afd5ab73b37b4eca34ed25939b57db152))
 * 更新基础二 ([74287f4](https://github.com/FearlessMa/FENotes/commit/74287f4d6a72daf987798c1edf587ec153b466e9))
 
 

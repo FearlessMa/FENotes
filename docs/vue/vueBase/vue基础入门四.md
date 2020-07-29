@@ -1,6 +1,6 @@
 # vue基础入门（四）
 
-## 1.全局API
+## 1.全局配置
 
 - Vue.config 是一个对象，包含 Vue 的全局配置。可以在启动应用之前修改下列 property：
 
@@ -418,6 +418,134 @@ var MyComponent = Vue.component('my-component')
 
 当 install 方法被同一个插件多次调用，插件将只会被安装一次。
 
+- 示例
+
+```js
+const vueUse = {
+  install(Vue){
+    // 一些操作，如使用Vue.components()批量注册全局组件。
+  }
+}
+
+function vueUseFn(Vue){
+  // 一些操作，如使用Vue.components()批量注册全局组件。
+}
+
+// 使用 
+Vue.use(vueUse);
+Vue.use(vueUseFn)
+```
+
+> 总结
+> 1. 一些组件库通过`Vue.use`，批量注册多个组件，简化手动调用`Vue.components`
+> 2. 自定义封装的一些操作，简化引入初始化过程可考虑使用
+
+
+### 2.9 Vue.mixin
+
+-Vue.mixin( mixin )
+
+- 参数：
+
+`{Object} mixin`
+
+- 用法：
+
+全局注册一个混入，影响注册之后所有创建的每个 Vue 实例。插件作者可以使用混入，向组件注入自定义的行为。不推荐在应用代码中使用。
+
+- 示例
+
+```js
+const vueMixin = {
+  // vue的options，包括life cycle，methods，computed 等。被混入的对象都可以使用混入对象的属性
+};
+
+Vue.mixin(vueMixin);
+```
+
+> 总结
+> 1. 不推荐全局混入。优先使用局部混入。
+> 2. 混入过多对代码阅读增加成本
+
+
+### 2.10 Vue.compile
+
+- Vue.compile( template )
+
+- 参数：
+
+`{string} template`
+
+- 用法：
+
+将一个模板字符串编译成 render 函数。只在完整版时可用。
+
+```js
+var res = Vue.compile('<div><span>{{ msg }}</span></div>')
+
+new Vue({
+  data: {
+    msg: 'hello'
+  },
+  render: res.render,
+  staticRenderFns: res.staticRenderFns
+})
+```
+
+> 总结
+> 1. `Vue.compile`将字符串模板转换成render函数，要获得更多的自由度需要手动写render函数
+> 3. [vue编译](https://cn.vuejs.org/v2/guide/render-function.html)
+
+
+### 2.11 Vue.observable
+
+- Vue.observable( object )
+
+- 参数：
+
+`{Object} object`
+
+- 用法：
+
+让一个对象可响应。Vue 内部会用它来处理 data 函数返回的对象。
+
+返回的对象可以直接用于`渲染函数`和`计算属性`内，并且会在发生变更时触发相应的更新。也可以作为最小化的跨组件状态存储器，用于简单的场景：
+
+```js
+const state = Vue.observable({ count: 0 })
+
+const Demo = {
+  render(h) {
+    return h('button', {
+      on: { click: () => { state.count++ }}
+    }, `count is: ${state.count}`)
+  }
+}
+```
+
+> 总结
+> 1. 使数据对象变为响应式。
+> 2. 通过在`渲染函数`和`计算属性`内使用，可以实现vuex的状态共享
+
+
+### 2.12 Vue.version
+
+- 细节：
+
+提供字符串形式的 Vue 安装版本号。这对社区的插件和组件来说非常有用，你可以根据不同的版本号采取不同的策略。
+
+- 用法：
+```js
+var version = Number(Vue.version.split('.')[0])
+
+if (version === 2) {
+  // Vue v2.x.x
+} else if (version === 1) {
+  // Vue v1.x.x
+} else {
+  // Unsupported versions of Vue
+}
+```
 
 
 ![关注不迷路](https://imgkr.cn-bj.ufileos.com/1fdcd04b-dc7d-47f3-8949-85abbc8a25f3.png)

@@ -76,6 +76,26 @@ const vueSet = {
   </div>`
 };
 
+const vueUse = {
+  install(Vue) {
+    // 一些操作，如使用Vue.components()批量注册全局组件。
+  }
+};
+
+function vueUseFn(Vue) {
+  // 一些操作，如使用Vue.components()批量注册全局组件。
+}
+
+// 使用
+Vue.use(vueUse);
+Vue.use(vueUseFn);
+
+const vueMixin = {
+  // vue的options，包括life cycle，methods，computed 等。被混入的对象都可以使用混入对象的属性
+};
+
+Vue.mixin(vueMixin);
+
 const app = {
   // name 标识
   name: 'app',
