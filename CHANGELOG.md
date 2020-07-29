@@ -25,6 +25,7 @@
 * 修改vue基础入门二格式 ([4a61606](https://github.com/FearlessMa/FENotes/commit/4a61606e976c5b63ce1a5020a58de06ac67a1f4f))
 * 增加 vue 基础五 ([5f22393](https://github.com/FearlessMa/FENotes/commit/5f223932e55ae636a5c0d184d740c3cdf2b8c823))
 * 增加图片 ([d5c4cd3](https://github.com/FearlessMa/FENotes/commit/d5c4cd3afd5ab73b37b4eca34ed25939b57db152))
+* 更新 vue 基础 五 ([47b6e9d](https://github.com/FearlessMa/FENotes/commit/47b6e9d47fb956477e267b1932f36e2853886b26))
 * 更新基础二 ([74287f4](https://github.com/FearlessMa/FENotes/commit/74287f4d6a72daf987798c1edf587ec153b466e9))
 
 
