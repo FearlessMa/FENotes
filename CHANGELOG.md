@@ -13,6 +13,7 @@
 * t ([7b87198](https://github.com/FearlessMa/FENotes/commit/7b8719838b84d5ebaba3d24572bd736a9e1fca3e))
 * vue  life cycle ([bcc6da8](https://github.com/FearlessMa/FENotes/commit/bcc6da833b2cbb765d704bff2261d5d031c640db))
 * vue base 2 ([ceee353](https://github.com/FearlessMa/FENotes/commit/ceee3533c4ffec4a682a88a8294652ffc0495a2d))
+* vue 单文件组件 ([3b9a955](https://github.com/FearlessMa/FENotes/commit/3b9a955217402322a8c93794c1d5290dbab73c8e))
 * vue 基础 ([f241a77](https://github.com/FearlessMa/FENotes/commit/f241a7738881c7468795b166f8ab2f3d76d5b25f))
 * vue 基础入门(一) ([bcbe9f1](https://github.com/FearlessMa/FENotes/commit/bcbe9f144c2bc631d640d2060ecabddfcfa2acfc))
 * vue 基础入门三 ([4455a47](https://github.com/FearlessMa/FENotes/commit/4455a47ee188ef8730e575d7fe7279178cfb6a24))
