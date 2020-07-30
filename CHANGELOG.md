@@ -1,3 +1,14 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.2.0](https://github.com/FearlessMa/FENotes/compare/v1.1.0...v1.2.0) (2020-07-30)
+
+
+### Features
+
+* vue 单文件组件 ([24af678](https://github.com/FearlessMa/FENotes/commit/24af6784c0bd8a265cb6d5edf359ce0b40ef1f52))
+
 # [1.1.0](https://github.com/FearlessMa/FENotes/compare/0b7d4af80d6e85ceeae64bf584551dfd86c6b709...v1.1.0) (2020-07-30)
 
 
@@ -28,6 +39,3 @@
 * 增加图片 ([d5c4cd3](https://github.com/FearlessMa/FENotes/commit/d5c4cd3afd5ab73b37b4eca34ed25939b57db152))
 * 更新 vue 基础 五 ([47b6e9d](https://github.com/FearlessMa/FENotes/commit/47b6e9d47fb956477e267b1932f36e2853886b26))
 * 更新基础二 ([74287f4](https://github.com/FearlessMa/FENotes/commit/74287f4d6a72daf987798c1edf587ec153b466e9))
-
-
-
