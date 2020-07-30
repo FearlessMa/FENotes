@@ -1,6 +1,6 @@
 # vue单文件组件
 
-## [Vue 单文件组件 (SFC) 规范](https://vue-loader.vuejs.org/zh/spec.html)
+## 1. [Vue 单文件组件 (SFC) 规范](https://vue-loader.vuejs.org/zh/spec.html)
 
 - 简介
 
@@ -66,14 +66,14 @@ vue-loader 支持使用非默认语言，比如 CSS 预处理器，预编译的 
 </style>
 ```
 
-## 语言块
+## 2. 语言块
 
-### 模板
+### 2.1 模板
 每个 .vue 文件最多包含一个 `<template>` 块。
 
 内容将被提取并传递给 vue-template-compiler 为字符串，预处理为 JavaScript 渲染函数，并最终注入到从 `<script>` 导出的组件中。
 
-### 脚本
+### 2.2 脚本
 
 每个 .vue 文件最多包含一个 `<script> `块。
 
@@ -83,7 +83,7 @@ vue-loader 支持使用非默认语言，比如 CSS 预处理器，预编译的 
 
 任何匹配 .js 文件 (或通过它的 lang 特性指定的扩展名) 的 webpack 规则都将会运用到这个 `<script>` 块的内容中。
 
-### 样式
+### 2.3 样式
 
 默认匹配：/\.css$/。
 
@@ -94,4 +94,79 @@ vue-loader 支持使用非默认语言，比如 CSS 预处理器，预编译的 
 任何匹配 .css 文件 (或通过它的 lang 特性指定的扩展名) 的 webpack 规则都将会运用到这个 `<style>` 块的内容中。
 
 
-## 开始vue项目
+## 3. 创建vue项目
+
+### 3.1 通过Vue CLI 直接创建一个项目的脚手架
+
+- 需要先安装nodejs与npm
+
+  - 命令行输入一下命令
+
+
+```shell
+node -v 
+# v12.18.0
+# 看到有版本号输出 说明已安装
+
+npm -v
+
+# 6.14.7
+# 看到有版本号输出 说明已安装
+```
+
+![image-20200730105106634](https://imgkr.cn-bj.ufileos.com/ba81d6ca-16e6-4810-9071-0ed5749c4e06.png)
+
+
+> [Vue CLI官网](https://cli.vuejs.org/zh/guide/)
+
+
+- 或者使用已初始化好的模板
+
+```shell
+# 创建文件夹
+mkdir vue-demo
+
+# 进入文件夹
+cd vue-demo
+
+# 执行模板下载
+npx @fearless-ma/vue-antv-cli --init
+
+```
+
+- 如果npx安装很慢，可以把npm切到淘宝源
+
+```shell
+npm config set registry https://registry.npm.taobao.org
+```
+
+![image-20200730105529745](https://imgkr.cn-bj.ufileos.com/0f7edd7b-c567-47dd-ac80-820902d03e92.png)
+
+![image-20200730111317390](https://imgkr.cn-bj.ufileos.com/0abbb703-29bb-466e-a233-881d670c6e43.png)
+
+![image-20200730111946877](https://imgkr.cn-bj.ufileos.com/2e8f0c2a-254f-4ca3-bce4-ac23d2376d28.png)
+
+
+- 安装依赖，启动项目
+
+```shell
+# npm i 安装依赖
+npm install 
+# 启动项目
+npm run serve 
+```
+
+![image-20200730111659548](https://imgkr.cn-bj.ufileos.com/6bac8234-ffbf-4406-973d-dd5244bb6b44.png)
+
+- 浏览器地址栏输入：http://localhost:8081/
+
+![image-20200730111810740](https://imgkr.cn-bj.ufileos.com/7203a070-420c-4a61-b718-e8a31ce9d538.png)
+
+
+- 查看代码`src/app.vue`单文件组件
+
+![image-20200730112359371](https://imgkr.cn-bj.ufileos.com/4477bc08-9ce5-4f0a-b51b-b7af0b3ef8ab.png)
+
+
+> [demo地址](https://github.com/FearlessMa/FENotes-vue-demo)
+
