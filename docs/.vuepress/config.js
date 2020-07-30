@@ -34,6 +34,13 @@ module.exports = {
           ]
           },
           {
+            title:'vueRouter',
+            sidebarDepth: 2,
+            children:[
+              '/vue/vueRouter/vueRouter'
+            ]
+          },
+          {
             title:'vue技巧',
             sidebarDepth: 2,
             children:[
