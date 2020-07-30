@@ -1,3 +1,3 @@
-[Vue Router(一)](vueRouter.md)
+[router基础](vueRouter.md)
 
 

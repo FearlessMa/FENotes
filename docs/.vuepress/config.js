@@ -37,7 +37,7 @@ module.exports = {
             title:'vueRouter',
             sidebarDepth: 2,
             children:[
-              '/vue/vueRouter/vueRouter'
+              ['/vue/vueRouter/vueRouter','router基础']
             ]
           },
           {
