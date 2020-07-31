@@ -45,7 +45,9 @@ module.exports = {
             title:'vue技巧',
             sidebarDepth: 2,
             children:[
-              '/vue/other/组件通信/vue组件通信'
+              ['/vue/other/', '目录'],
+              '/vue/other/组件通信/vue组件通信',
+              '/vue/other/指令实现v-model'
             ]
           }
         ]
