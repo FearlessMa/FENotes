@@ -626,11 +626,57 @@ router.push({ name: 'user', params: { userId: 123 }})
 - 编译正则的选项
 
 
-
 ### 2.4 Router
 
 
+1. `routes`
 
+> route的Array
+
+2. `mode`
+
+> 路由模式 hash 或 history
+
+- 类型: string
+
+- 默认值: "hash" (浏览器环境) | "abstract" (Node.js 环境)
+
+- 可选值: "hash" | "history" | "abstract"
+
+
+3. `base`
+
+> 路由的基础路径
+
+- 类型: string
+
+- 默认值: "/"
+
+应用的基路径。例如，如果整个单页应用服务在 /app/ 下，然后 base 就应该设为 "/app/"
+
+
+4. `linkActiveClass`
+
+- 类型: string
+
+- 默认值: "router-link-active"
+
+全局配置 `<router-link>` 默认的激活的 class。参考 router-link。
+
+5. `linkExactActiveClass`
+
+- 类型: string
+
+- 默认值: "router-link-exact-active"
+
+全局配置 `<router-link>` 默认的精确激活的 class。可同时翻阅 router-link。
+
+
+6. `scrollBehavior`
+
+> 路由进入页面后的滚动
+
+- 类型: Function
 
 
 > [Vue Router API](https://router.vuejs.org/zh/api/)
