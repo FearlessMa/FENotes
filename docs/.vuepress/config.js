@@ -47,7 +47,8 @@ module.exports = {
             children:[
               ['/vue/other/', '目录'],
               '/vue/other/组件通信/vue组件通信',
-              '/vue/other/指令实现v-model'
+              '/vue/other/指令实现v-model',
+              '/vue/other/简单状态管理',
             ]
           }
         ]
