@@ -548,4 +548,4 @@ if (version === 2) {
 ```
 
 
-![关注不迷路](https://imgkr.cn-bj.ufileos.com/1fdcd04b-dc7d-47f3-8949-85abbc8a25f3.png)
+![关注不迷路](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/FENotes.png)

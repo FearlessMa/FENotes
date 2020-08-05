@@ -114,7 +114,7 @@ npm -v
 # 看到有版本号输出 说明已安装
 ```
 
-![image-20200730105106634](https://imgkr.cn-bj.ufileos.com/ba81d6ca-16e6-4810-9071-0ed5749c4e06.png)
+![image-20200730105106634](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150039.png)
 
 
 > [Vue CLI官网](https://cli.vuejs.org/zh/guide/)
@@ -140,11 +140,11 @@ npx @fearless-ma/vue-antv-cli --init
 npm config set registry https://registry.npm.taobao.org
 ```
 
-![image-20200730105529745](https://imgkr.cn-bj.ufileos.com/0f7edd7b-c567-47dd-ac80-820902d03e92.png)
+![image-20200730105529745](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150040.png)
 
-![image-20200730111317390](https://imgkr.cn-bj.ufileos.com/0abbb703-29bb-466e-a233-881d670c6e43.png)
+![image-20200730111317390](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150041.png)
 
-![image-20200730111946877](https://imgkr.cn-bj.ufileos.com/2e8f0c2a-254f-4ca3-bce4-ac23d2376d28.png)
+![image-20200730111946877](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150042.png)
 
 
 - 安装依赖，启动项目
@@ -156,16 +156,16 @@ npm install
 npm run serve 
 ```
 
-![image-20200730111659548](https://imgkr.cn-bj.ufileos.com/6bac8234-ffbf-4406-973d-dd5244bb6b44.png)
+![image-20200730111659548](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150043.png)
 
 - 浏览器地址栏输入：http://localhost:8081/
 
-![image-20200730111810740](https://imgkr.cn-bj.ufileos.com/7203a070-420c-4a61-b718-e8a31ce9d538.png)
+![image-20200730111810740](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150044.png)
 
 
 - 查看代码`src/app.vue`单文件组件
 
-![image-20200730112359371](https://imgkr.cn-bj.ufileos.com/4477bc08-9ce5-4f0a-b51b-b7af0b3ef8ab.png)
+![image-20200730112359371](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150045.png)
 
 
 > [demo地址](https://github.com/FearlessMa/FENotes-vue-demo)

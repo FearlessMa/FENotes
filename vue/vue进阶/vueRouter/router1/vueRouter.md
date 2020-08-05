@@ -27,7 +27,7 @@ Vue.use(VueRouter)
   - pages/a.vue
   - pages/b.vue
 
-![image-20200730150514499](https://imgkr.cn-bj.ufileos.com/882145ea-f68f-4ebe-8589-66be2be6b4bc.png)
+![image-20200730150514499](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150926.png)
 
 
 - a.vue与b.vue增加以下内容
@@ -119,15 +119,15 @@ new Vue({
 
 - 打开浏览器输入项目地址：`http://localhost:8081/#/`
 
-![image-20200730161756598](https://imgkr.cn-bj.ufileos.com/02c8cde0-b3b6-4645-9992-e5dfbbac8519.png)
+![image-20200730161756598](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150927.png)
 
 - url输入a.vue页面地址：`http://localhost:8081/#/a`
 
-![image-20200730161951042](https://imgkr.cn-bj.ufileos.com/1aa70941-b489-4a5b-9e70-609a463242c9.png)
+![image-20200730161951042](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150928.png)
 
 - url输入b.vue页面地址：`http://localhost:8081/#/b`
 
-![image-20200730162014736](https://imgkr.cn-bj.ufileos.com/f7fd57d0-bc24-4aa6-bc0c-b9a6154928b0.png)
+![image-20200730162014736](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150929.png)
 
 - 修改app.vue代码
 
@@ -194,9 +194,9 @@ export default {
 - 查看页面并点击按钮
 
 
-![image-20200730174556888](https://imgkr.cn-bj.ufileos.com/7cc78c72-6181-4ecf-acd6-7c1633d974be.png)
+![image-20200730174556888](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150930.png)
 
-![image-20200730174653125](https://imgkr.cn-bj.ufileos.com/762323a1-c979-4dad-bdb6-16df7139a469.png)
+![image-20200730174653125](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150931.png)
 
 - 匹配优先级
 
@@ -362,7 +362,7 @@ export default router
 
 ```html
 <router-link :to="{ path: '/abc'}" replace></router-link>
-``` 
+```
 
 3. `append`
 
@@ -680,3 +680,6 @@ router.push({ name: 'user', params: { userId: 123 }})
 
 
 > [Vue Router API](https://router.vuejs.org/zh/api/)
+
+
+![关注不迷路](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/FENotes.png)

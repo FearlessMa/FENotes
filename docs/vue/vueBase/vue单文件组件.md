@@ -114,7 +114,7 @@ npm -v
 # 看到有版本号输出 说明已安装
 ```
 
-![image-20200730105106634](https://github.com/FearlessMa/FENotes-pic/blob/master/vue/vueBase/single/image-20200730105106634.png)
+![image-20200730105106634](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150039.png)
 
 
 > [Vue CLI官网](https://cli.vuejs.org/zh/guide/)
@@ -140,11 +140,11 @@ npx @fearless-ma/vue-antv-cli --init
 npm config set registry https://registry.npm.taobao.org
 ```
 
-![image-20200730105529745](https://github.com/FearlessMa/FENotes-pic/blob/master/vue/vueBase/single/image-20200730105529745.png)
+![image-20200730105529745](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150040.png)
 
-![image-20200730111317390](https://github.com/FearlessMa/FENotes-pic/blob/master/vue/vueBase/single/image-20200730111317390.png)
+![image-20200730111317390](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150041.png)
 
-![image-20200730111946877](https://github.com/FearlessMa/FENotes-pic/blob/master/vue/vueBase/single/image-20200730111946877.png)
+![image-20200730111946877](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150042.png)
 
 
 - 安装依赖，启动项目
@@ -156,18 +156,17 @@ npm install
 npm run serve 
 ```
 
-![image-20200730111659548](https://github.com/FearlessMa/FENotes-pic/blob/master/vue/vueBase/single/image-20200730111659548.png)
+![image-20200730111659548](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150043.png)
 
 - 浏览器地址栏输入：http://localhost:8081/
 
-![image-20200730111810740](https://github.com/FearlessMa/FENotes-pic/blob/master/vue/vueBase/single/image-20200730111810740.png)
+![image-20200730111810740](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150044.png)
 
 
 - 查看代码`src/app.vue`单文件组件
 
-![image-20200730112359371](https://github.com/FearlessMa/FENotes-pic/blob/master/vue/vueBase/single/image-20200730112359371.png)
+![image-20200730112359371](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150045.png)
 
 
 > [demo地址](https://github.com/FearlessMa/FENotes-vue-demo)
 
-![关注不迷路](https://imgkr.cn-bj.ufileos.com/1fdcd04b-dc7d-47f3-8949-85abbc8a25f3.png)
