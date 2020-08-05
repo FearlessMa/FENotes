@@ -77,7 +77,7 @@ typora-copy-images-to: upload
   </style>
   ```
 
-  <img src="image-20200714163702049.png" alt="image-20200714163702049" />
+  <img src="https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/image-20200714164832877.png" alt="image-20200714163702049" />
 
 
 
@@ -139,7 +139,7 @@ typora-copy-images-to: upload
   </script>
   ````
 
-  ![image-20200714164832877](./image-20200714164832877.png)
+  ![image-20200714164832877](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/image-20200715144918078.png)
 
 ## eventBus
 
@@ -224,9 +224,9 @@ typora-copy-images-to: upload
   </script>
   ```
 
-  ![image-20200715144918078](/Users/mhc/work/FENotes/vue/vue组件通信/image-20200715144918078.png)
+  ![image-20200715144918078](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/image-20200715144946729.png)
 
-  ![image-20200715144946729](/Users/mhc/work/FENotes/vue/vue组件通信/image-20200715144946729.png)
+  ![image-20200715144946729](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/image-20200714163702049.png)
 
 ## vuex
 

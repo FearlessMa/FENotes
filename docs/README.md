@@ -10,4 +10,6 @@ FENotes
 
 [nodejs]()
 
+[工具](/tools/index.md)
+
 [示例](../dist/base3.html)

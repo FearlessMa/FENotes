@@ -52,6 +52,15 @@ module.exports = {
             ]
           }
         ]
+      },
+      {
+        title: '工具',
+        collapsable: false, // 可选的, 默认值是 true,
+        sidebarDepth: 2, 
+        children: [
+          ['/tools/', '目录'],
+          ['/tools/markdown/', 'markdown图片自动上传'],
+        ]
       }
     ]
   },
