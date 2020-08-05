@@ -663,3 +663,5 @@ max - 数字。最多可以缓存多少组件实例。
 
 
 > [vueAPI](https://cn.vuejs.org/v2/api/#%E5%AE%9E%E4%BE%8B-property)
+
+![关注不迷路](https://imgkr.cn-bj.ufileos.com/1fdcd04b-dc7d-47f3-8949-85abbc8a25f3.png)
