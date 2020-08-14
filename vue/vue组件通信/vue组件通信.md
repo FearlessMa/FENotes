@@ -16,69 +16,68 @@ typora-copy-images-to: upload
 
 - parent组件
 
-  ````js
-  <template>
-    <div class="parent">
-      <div>parent</div>
-      <div>p2:{{ p2 }}</div>
-      <Child :p1="p1" :setProps="setProps" />
-    </div>
-  </template>
-  <script>
-  import Child from './c';
-  export default {
-    name: 'parent',
-    components: { Child },
-    data() {
-      return { p1: '通过props传递：parent prop 1', p2: '' };
-    },
-    methods: {
-      setProps(prop) {
-        this.p2 = prop;
-      }
+````js
+<template>
+  <div class="parent">
+    <div>parent</div>
+    <div>p2:{{ p2 }}</div>
+    <Child :p1="p1" :setProps="setProps" />
+  </div>
+</template>
+<script>
+import Child from './c';
+export default {
+  name: 'parent',
+  components: { Child },
+  data() {
+    return { p1: '通过props传递：parent prop 1', p2: '' };
+  },
+  methods: {
+    setProps(prop) {
+      this.p2 = prop;
     }
-  };
-  </script>
-  <style lang="less" scoped>
-  .parent {
-    width: 300px;
   }
-  </style>
-  ````
+};
+</script>
+<style lang="less" scoped>
+.parent {
+  width: 300px;
+}
+</style>
+````
 
-  
+
 
 - child组件
 
-  ```js
-  <template>
-    <div class="child">
-      <div>child</div>
-      <div>p1：{{ p1 }}</div>
-    </div>
-  </template>
-  <script>
-  export default {
-    name: 'child',
-    props: ['p1', 'setProps'],
-    data() {
-      return { p2: '通过方法cb传递：child prop p2' };
-    },
-    mounted() {
-      this.setProps(this.p2);
-    }
-  };
-  </script>
-  <style lang="less" scoped>
-  .child {
-    border: 1px solid #ddd;
-    padding: 10px;
+```js
+<template>
+  <div class="child">
+    <div>child</div>
+    <div>p1：{{ p1 }}</div>
+  </div>
+</template>
+<script>
+export default {
+  name: 'child',
+  props: ['p1', 'setProps'],
+  data() {
+    return { p2: '通过方法cb传递：child prop p2' };
+  },
+  mounted() {
+    this.setProps(this.p2);
   }
-  </style>
-  ```
+};
+</script>
+<style lang="less" scoped>
+.child {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+</style>
+```
 
-  <img src="https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/image-20200714164832877.png" alt="image-20200714163702049" />
-
+![image-20200714163702049](image-20200714163702049.png)
 
 
 ## props与$emit 
@@ -91,55 +90,55 @@ typora-copy-images-to: upload
 
 - Parent 
 
-  ````js
-  <template>
-    <div class="parent">
-      <div>parent</div>
-      <div>emitData:{{ emitData }}</div>
-      <Child @child="event" />
-    </div>
-  </template>
-  <script>
-  import Child from './c';
-  export default {
-    name: 'parent',
-    components: { Child },
-    data() {
-      return { emitData: '' };
-    },
-    methods: {
-      event(data) {
-        this.emitData = data;
-      }
+````js
+<template>
+  <div class="parent">
+    <div>parent</div>
+    <div>emitData:{{ emitData }}</div>
+    <Child @child="event" />
+  </div>
+</template>
+<script>
+import Child from './c';
+export default {
+  name: 'parent',
+  components: { Child },
+  data() {
+    return { emitData: '' };
+  },
+  methods: {
+    event(data) {
+      this.emitData = data;
     }
-  };
-  </script>
-  ````
+  }
+};
+</script>
+````
 
 - child
 
-  ````js
-  <template>
-    <div class="child">
-      <div>child</div>
-    </div>
-  </template>
-  <script>
-  export default {
-    name: 'child',
-    methods: {
-      event() {
-        this.$emit('child', '通过$emit传递：child emit');
-      }
-    },
-    mounted() {
-      this.event();
+````js
+<template>
+  <div class="child">
+    <div>child</div>
+  </div>
+</template>
+<script>
+export default {
+  name: 'child',
+  methods: {
+    event() {
+      this.$emit('child', '通过$emit传递：child emit');
     }
-  };
-  </script>
-  ````
+  },
+  mounted() {
+    this.event();
+  }
+};
+</script>
+````
 
-  ![image-20200714164832877](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/image-20200715144918078.png)
+![image-20200714164832877](image-20200715144918078.png)
 
 ## eventBus
 
@@ -149,19 +148,19 @@ typora-copy-images-to: upload
 
 - parent
 
-  ```js
-   this.$eventBus.$on('child', (data) => {
-        console.log('data: ', data);
-      });
-  ```
+```js
+  this.$eventBus.$on('child', (data) => {
+      console.log('data: ', data);
+    });
+```
 
 - child
 
-  ```js
-        this.$eventBus.$emit('child', '通过$eventBus传递：child emit');
-  ```
+```js
+      this.$eventBus.$emit('child', '通过$eventBus传递：child emit');
+```
 
-  
+
 
 ## provider 与 inject
 
@@ -171,62 +170,62 @@ typora-copy-images-to: upload
 
 - 方法：
 
-  - parent
+- parent
 
-  ```js
-  <template>
-    <div class="parent">
-      <div @click="setMsg">parent</div>
-      <div>emitData:{{ emitData }}</div>
-      <hr />
-      <Child />
-    </div>
-  </template>
-  <script>
-  import Child from './c';
-  
-  // provide
-  export default {
-    name: 'parent',
-    components: { Child },
-    data() {
-      return { emitData: '', msg: 'parent', msgObj: { msg: 'parent msgObj' } };
-    },
-    provide() {
-      return { msg: this.msg, msgObj: this.msgObj };
-    },
-    methods: {
-      setMsg() {
-        console.log('msg change ');
-        this.msgObj.msg = this.msg = 'change parent';
-      }
-    },
-    mounted() {}
-  };
-  </script>
-  ```
+```js
+<template>
+  <div class="parent">
+    <div @click="setMsg">parent</div>
+    <div>emitData:{{ emitData }}</div>
+    <hr />
+    <Child />
+  </div>
+</template>
+<script>
+import Child from './c';
 
-  - child
+// provide
+export default {
+  name: 'parent',
+  components: { Child },
+  data() {
+    return { emitData: '', msg: 'parent', msgObj: { msg: 'parent msgObj' } };
+  },
+  provide() {
+    return { msg: this.msg, msgObj: this.msgObj };
+  },
+  methods: {
+    setMsg() {
+      console.log('msg change ');
+      this.msgObj.msg = this.msg = 'change parent';
+    }
+  },
+  mounted() {}
+};
+</script>
+```
 
-  ```js
-  <template>
-    <div class="child">
-      <div>child</div>
-      <div>msg:{{ msg }}</div>
-      <div>msgObj.msg:{{ msgObj.msg }}</div>
-    </div>
-  </template>
-  <script>
-  export default {
-    name: 'child',
-    inject: ['msg', 'msgObj']
-  };
-  </script>
-  ```
+- child
 
-  ![image-20200715144918078](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/image-20200715144946729.png)
+```js
+<template>
+  <div class="child">
+    <div>child</div>
+    <div>msg:{{ msg }}</div>
+    <div>msgObj.msg:{{ msgObj.msg }}</div>
+  </div>
+</template>
+<script>
+export default {
+  name: 'child',
+  inject: ['msg', 'msgObj']
+};
+</script>
+```
 
-  ![image-20200715144946729](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/image-20200714163702049.png)
+![image-20200715144918078](image-20200715144946729.png)
+
+![image-20200715144946729](image-20200714163702049.png)
 
 ## vuex
 

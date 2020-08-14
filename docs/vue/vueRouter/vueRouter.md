@@ -27,7 +27,7 @@ Vue.use(VueRouter)
   - pages/a.vue
   - pages/b.vue
 
-![image-20200730150514499](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150926.png)
+![image-20200730150514499](https://fe-notes-1302400351.cos.ap-beijing.myqcloud.com/js/20200805221625.png)
 
 
 - a.vue与b.vue增加以下内容
@@ -119,15 +119,15 @@ new Vue({
 
 - 打开浏览器输入项目地址：`http://localhost:8081/#/`
 
-![image-20200730161756598](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150927.png)
+![image-20200730161756598](https://fe-notes-1302400351.cos.ap-beijing.myqcloud.com/js/20200805221626.png)
 
 - url输入a.vue页面地址：`http://localhost:8081/#/a`
 
-![image-20200730161951042](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150928.png)
+![image-20200730161951042](https://fe-notes-1302400351.cos.ap-beijing.myqcloud.com/js/20200805221627.png)
 
 - url输入b.vue页面地址：`http://localhost:8081/#/b`
 
-![image-20200730162014736](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150929.png)
+![image-20200730162014736](https://fe-notes-1302400351.cos.ap-beijing.myqcloud.com/js/20200805221628.png)
 
 - 修改app.vue代码
 
@@ -194,9 +194,9 @@ export default {
 - 查看页面并点击按钮
 
 
-![image-20200730174556888](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150930.png)
+![image-20200730174556888](https://fe-notes-1302400351.cos.ap-beijing.myqcloud.com/js/20200805221629.png)
 
-![image-20200730174653125](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/20200805150931.png)
+![image-20200730174653125](https://fe-notes-1302400351.cos.ap-beijing.myqcloud.com/js/20200805221630.png)
 
 - 匹配优先级
 
@@ -682,4 +682,5 @@ router.push({ name: 'user', params: { userId: 123 }})
 > [Vue Router API](https://router.vuejs.org/zh/api/)
 
 
-![关注不迷路](https://raw.githubusercontent.com/FearlessMa/FENotes-pic/master/js/FENotes.png)
+![关注不迷路](https://fe-notes-1302400351.cos.ap-beijing.myqcloud.com/js/20200805221427.png)
+
