@@ -1,0 +1,1 @@
+[日常笔记](notes/index.md)

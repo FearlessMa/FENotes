@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>event</title>
+  <style>
+    div {
+      border: 1px solid;
+      width: 50%;
+      height: 50%;
+      padding: 10px;
+      margin: auto;
+      text-align: center;
+    }
+
+    #d2 {
+      background-color: #ddd;
+    }
+
+    #d3 {
+      background-color: #888888;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="d1">
+    1
+    <div id="d2">
+      2
+      <div id="d3">
+        3
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+
+  function clickFn(msg) {
+    console.log('msg: ', msg);
+  }
+  const getById = (id) => document.getElementById(id);
+
+  const d1 = getById('d1');
+  const d2 = getById('d2');
+  const d3 = getById('d3');
+  // capture:  Boolean，表示 listener 会在该类型的事件捕获阶段传播到该 EventTarget 时触发。 默认值false 冒泡阶段触发
+  d1.addEventListener('click', clickFn.bind(d1, '1捕获阶段'), { capture: true })
+  d2.addEventListener('click', clickFn.bind(d2, '2捕获阶段'), { capture: true })
+  d3.addEventListener('click', clickFn.bind(d3, '3捕获阶段'), { capture: true })
+  d1.addEventListener('click', clickFn.bind(d1, '1冒泡阶段'), { capture: false })
+  d2.addEventListener('click', clickFn.bind(d2, '2冒泡阶段'), { capture: false })
+  d3.addEventListener('click', clickFn.bind(d3, '3冒泡阶段'), { capture: false })
+
+
+
+</script>
+
+</html>
