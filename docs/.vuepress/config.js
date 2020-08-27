@@ -72,7 +72,8 @@ module.exports = {
         sidebarDepth: 2,
         children: [
           ['/tools/', '目录'],
-          ['/tools/markdown/', 'markdown图片自动上传']
+          ['/tools/markdown/', 'markdown图片自动上传'],
+          '/tools/devTools/'
         ]
       }
     ]
