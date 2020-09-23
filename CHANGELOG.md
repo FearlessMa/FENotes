@@ -1,8 +1,10 @@
-# Changelog
+# [1.3.0](https://github.com/FearlessMa/FENotes/compare/v1.2.0...v1.3.0) (2020-09-23)
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [1.3.0](https://github.com/FearlessMa/FENotes/compare/v1.2.0...v1.3.0) (2020-09-23)
+### Bug Fixes
+
+* **img:** 更换图床为github ([3fdbed5](https://github.com/FearlessMa/FENotes/commit/3fdbed5a46e4a0b575087e4983b537b97c830267))
+* **pic:** 图片问题 ([c6b37fb](https://github.com/FearlessMa/FENotes/commit/c6b37fb297da493017c38358f03c1d552da935c5))
 
 
 ### Features
@@ -22,10 +24,6 @@ All notable changes to this project will be documented in this file. See [standa
 * **vuerouter:** router ([351c700](https://github.com/FearlessMa/FENotes/commit/351c700bbee3d9b215ed74a5d964f552b1d18d65))
 
 
-### Bug Fixes
-
-* **img:** 更换图床为github ([3fdbed5](https://github.com/FearlessMa/FENotes/commit/3fdbed5a46e4a0b575087e4983b537b97c830267))
-* **pic:** 图片问题 ([c6b37fb](https://github.com/FearlessMa/FENotes/commit/c6b37fb297da493017c38358f03c1d552da935c5))
 
 # [1.2.0](https://github.com/FearlessMa/FENotes/compare/v1.1.0...v1.2.0) (2020-07-30)
 
@@ -66,3 +64,6 @@ All notable changes to this project will be documented in this file. See [standa
 * 增加图片 ([d5c4cd3](https://github.com/FearlessMa/FENotes/commit/d5c4cd3afd5ab73b37b4eca34ed25939b57db152))
 * 更新 vue 基础 五 ([47b6e9d](https://github.com/FearlessMa/FENotes/commit/47b6e9d47fb956477e267b1932f36e2853886b26))
 * 更新基础二 ([74287f4](https://github.com/FearlessMa/FENotes/commit/74287f4d6a72daf987798c1edf587ec153b466e9))
+
+
+
