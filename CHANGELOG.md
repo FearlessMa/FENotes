@@ -1,3 +1,32 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.3.0](https://github.com/FearlessMa/FENotes/compare/v1.2.0...v1.3.0) (2020-09-23)
+
+
+### Features
+
+* 更新devTools ([3344b3c](https://github.com/FearlessMa/FENotes/commit/3344b3c93653a25f1478b835d51d87adefa106eb))
+* **tools:** 常用工具 ([fd65f3f](https://github.com/FearlessMa/FENotes/commit/fd65f3f14f427f5f2cb438f952f08048d23421e6))
+* 事件问题 ([e0c00e2](https://github.com/FearlessMa/FENotes/commit/e0c00e2965daf1746e7c51d6dc0ed9b6400dfeaa))
+* 使用腾讯云 图床 ([d49f91f](https://github.com/FearlessMa/FENotes/commit/d49f91fad20b07cd0f5389e611289e72453d8553))
+* 增加 指令实现v-model ([c2643dd](https://github.com/FearlessMa/FENotes/commit/c2643ddb1ee47d69c43dccc138678a67a6cbe940))
+* 阻止弹出层滚动带动页面滚动 ([1d8abd8](https://github.com/FearlessMa/FENotes/commit/1d8abd813398610aff6596a27daeb411138b6171))
+* 阻止滚轮滚动事件 ([653fd81](https://github.com/FearlessMa/FENotes/commit/653fd811971e5adbab3719ad06ba63cc0987539a))
+* **markdown:** 自动图片上传 ([e5bb3ae](https://github.com/FearlessMa/FENotes/commit/e5bb3ae92c894d9681adf387ab94c3ce98ac4fe4))
+* **other:** 简单状态管理 ([80121ad](https://github.com/FearlessMa/FENotes/commit/80121ad4ad0bf5b56a23d1a5b2a2b4d5ae7083c1))
+* **router:** router 一 ([823e3fa](https://github.com/FearlessMa/FENotes/commit/823e3facd2e9285211a9df27b18d16958bee392c))
+* **router:** router 配置 ([8ee2801](https://github.com/FearlessMa/FENotes/commit/8ee2801d935d84f9998f354d3d06bad60717eeb8))
+* **router:** 修改标题 ([30fcf0e](https://github.com/FearlessMa/FENotes/commit/30fcf0ed1548bb12626f3f36ac0d7434d2d49f35))
+* **vuerouter:** router ([351c700](https://github.com/FearlessMa/FENotes/commit/351c700bbee3d9b215ed74a5d964f552b1d18d65))
+
+
+### Bug Fixes
+
+* **img:** 更换图床为github ([3fdbed5](https://github.com/FearlessMa/FENotes/commit/3fdbed5a46e4a0b575087e4983b537b97c830267))
+* **pic:** 图片问题 ([c6b37fb](https://github.com/FearlessMa/FENotes/commit/c6b37fb297da493017c38358f03c1d552da935c5))
+
 # [1.2.0](https://github.com/FearlessMa/FENotes/compare/v1.1.0...v1.2.0) (2020-07-30)
 
 
@@ -37,6 +66,3 @@
 * 增加图片 ([d5c4cd3](https://github.com/FearlessMa/FENotes/commit/d5c4cd3afd5ab73b37b4eca34ed25939b57db152))
 * 更新 vue 基础 五 ([47b6e9d](https://github.com/FearlessMa/FENotes/commit/47b6e9d47fb956477e267b1932f36e2853886b26))
 * 更新基础二 ([74287f4](https://github.com/FearlessMa/FENotes/commit/74287f4d6a72daf987798c1edf587ec153b466e9))
-
-
-
