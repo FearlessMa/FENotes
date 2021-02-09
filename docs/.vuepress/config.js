@@ -15,11 +15,11 @@ module.exports = {
     smoothScroll: true,
     sidebar: [
       {
-        title: 'js',
+        title: 'JavaScript',
         collapsable: false, // 可选的, 默认值是 true,
         sidebarDepth: 2,
         children: [
-          ['/js/', '目录'],
+          // ['/js/', '目录'],
           {
             title: '日常笔记',
             sidebarDepth: 2,
@@ -28,11 +28,11 @@ module.exports = {
         ]
       },
       {
-        title: 'vue',
+        title: 'Vue',
         collapsable: false, // 可选的, 默认值是 true,
         sidebarDepth: 2, // 可选的, 默认值是 1
         children: [
-          ['/vue/', '目录'],
+          // ['/vue/', '目录'],
           {
             title: 'vue基础',
             sidebarDepth: 2,
@@ -55,23 +55,23 @@ module.exports = {
             ]
           },
           {
-            title: 'vue技巧',
+            title: 'vue学习',
             sidebarDepth: 2,
             children: [
               ['/vue/other/', '目录'],
-              '/vue/other/组件通信/vue组件通信',
-              '/vue/other/指令实现v-model',
-              '/vue/other/简单状态管理'
+              // '/vue/other/组件通信/vue组件通信',
+              // '/vue/other/指令实现v-model',
+              // '/vue/other/简单状态管理'
             ]
           }
         ]
       },
       {
-        title: '工具',
+        title: 'Tools',
         collapsable: false, // 可选的, 默认值是 true,
         sidebarDepth: 2,
         children: [
-          ['/tools/', '目录'],
+          // ['/tools/', '目录'],
           ['/tools/markdown/', 'markdown图片自动上传'],
           '/tools/devTools/'
         ]
