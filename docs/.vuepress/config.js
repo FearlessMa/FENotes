@@ -67,6 +67,15 @@ module.exports = {
         ]
       },
       {
+        title:'CI/CD',
+        collapsable: false, // 可选的, 默认值是 true,
+        sidebarDepth: 2,
+        children:[
+          ['/CI/','CI'],
+          ['/CD/','CD']
+        ]
+      },
+      {
         title: 'Tools',
         collapsable: false, // 可选的, 默认值是 true,
         sidebarDepth: 2,
