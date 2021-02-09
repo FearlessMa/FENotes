@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/FearlessMa/FENotes/issues"
   },
-  "homepage": "https://github.com/FearlessMa/FENotes#readme",
+  "homepage": "https://fearlessma.github.io/FENotes",
   "devDependencies": {
     "@fearless-ma/auto-commit": "^1.38.3",
     "commitizen": "^4.1.2",
