@@ -3,6 +3,11 @@ module.exports = {
   description: 'FENotes',
   dest: './dist',
   base: '/FENotes/',
+  plugins: ['@vuepress/back-to-top', '@vuepress/nprogress'],
+  markdown: {
+    lineNumbers: true // 代码块显示行号
+  },
+  // theme: 'antdocs',
   // base: '/dist/',
   themeConfig: {
     editLinks: false,
@@ -19,7 +24,7 @@ module.exports = {
         collapsable: false, // 可选的, 默认值是 true,
         sidebarDepth: 2,
         children: [
-          // ['/js/', '目录'],
+          ['/js/', '目录'],
           {
             title: '日常笔记',
             sidebarDepth: 2,
@@ -32,7 +37,7 @@ module.exports = {
         collapsable: false, // 可选的, 默认值是 true,
         sidebarDepth: 2, // 可选的, 默认值是 1
         children: [
-          // ['/vue/', '目录'],
+          ['/vue/', '目录'],
           {
             title: 'vue基础',
             sidebarDepth: 2,
@@ -59,21 +64,34 @@ module.exports = {
             sidebarDepth: 2,
             children: [
               ['/vue/other/', '目录'],
-              // '/vue/other/组件通信/vue组件通信',
-              // '/vue/other/指令实现v-model',
-              // '/vue/other/简单状态管理'
+              '/vue/other/组件通信/vue组件通信',
+              '/vue/other/指令实现v-model',
+              '/vue/other/简单状态管理'
             ]
           }
         ]
       },
+
       {
-        title:'CI/CD',
-        collapsable: false, // 可选的, 默认值是 true,
+        title: 'Webpack',
+        collapsable: false,
         sidebarDepth: 2,
-        children:[
-          ['/CI/','CI'],
-          ['/CD/','CD']
+        children: [['/webpack/', '目录']]
+      },
+      {
+        title: 'CI/CD',
+        collapsable: false,
+        sidebarDepth: 2,
+        children: [
+          ['/ci/', 'CI'],
+          ['/cd/', 'CD']
         ]
+      },
+      {
+        title: 'MarkDown',
+        collapsable: false,
+        sidebarDepth: 2,
+        children: [['/markdown/', '目录']]
       },
       {
         title: 'Tools',
@@ -81,7 +99,7 @@ module.exports = {
         sidebarDepth: 2,
         children: [
           // ['/tools/', '目录'],
-          ['/tools/markdown/', 'markdown图片自动上传'],
+          // ['/tools/markdown/', 'MarkDown使用图床'],
           '/tools/devTools/'
         ]
       }

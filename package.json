@@ -20,6 +20,9 @@
   },
   "homepage": "https://fearlessma.github.io/FENotes",
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.8.0",
+    "@vuepress/plugin-medium-zoom": "^1.8.0",
+    "@vuepress/plugin-nprogress": "^1.8.0",
     "@fearless-ma/auto-commit": "^1.38.3",
     "commitizen": "^4.1.2",
     "conventional-changelog-cli": "^2.0.34",
@@ -30,6 +33,6 @@
     "prettier": "^2.0.5",
     "standard-version": "^8.0.2",
     "validate-commit-msg": "^2.14.0",
-    "vuepress": "^1.5.2"
+    "vuepress": "^1.8.0"
   }
 }

@@ -1,17 +1,17 @@
-FENotes
+# FENotes
 
-[js]()
+[JavaScript]()
 
-[vue](/vue/index.md)
+[Vue](/vue/index.md)
 
-[react]()
+[React]()
 
-[webpack]()
+[Webpack]()
 
-[nodejs]()
+[NodeJs]()
 
 [工具](/tools/index.md)
 
 [示例](../dist/base3.html)
 
-[xml](https://juejin.im/post/6844903561935978503)
+[XML](https://juejin.im/post/6844903561935978503)
