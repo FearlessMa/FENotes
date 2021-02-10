@@ -12,8 +12,7 @@ module.exports = {
   themeConfig: {
     home: true,
     nav: [
-      { text: '主页', link: '/' },
-      { text: 'Guide', link: '/guide/' },
+      { text: '主页', link: '/js/' },
       { text: 'GitHub', link: 'https://github.com/FearlessMa/FENotes' }
     ],
     editLinks: false,
@@ -29,8 +28,8 @@ module.exports = {
     sidebar: [
       {
         title: 'JavaScript',
-        collapsable: false, // 可选的, 默认值是 true,
-        sidebarDepth: 2,
+        collapsable: true, // 可选的, 默认值是 true,
+        sidebarDepth: 0,
         children: [
           ['/js/', '目录'],
           {
@@ -42,13 +41,13 @@ module.exports = {
       },
       {
         title: 'Vue',
-        collapsable: false, // 可选的, 默认值是 true,
-        sidebarDepth: 2, // 可选的, 默认值是 1
+        collapsable: true, // 可选的, 默认值是 true,
+        sidebarDepth: 0, // 可选的, 默认值是 1
         children: [
           ['/vue/', '目录'],
           {
             title: 'vue基础',
-            sidebarDepth: 2,
+            sidebarDepth: 0,
             children: [
               // ['/vue/vueBase/', '目录'],
               '/vue/vueBase/vue基础入门一',
@@ -61,7 +60,7 @@ module.exports = {
           },
           {
             title: 'vueRouter',
-            sidebarDepth: 2,
+            sidebarDepth: 0,
             children: [
               ['/vue/vueRouter/vueRouter', 'router基础'],
               ['/vue/vueRouter/vueRouter2', 'router守卫']
@@ -69,7 +68,7 @@ module.exports = {
           },
           {
             title: 'vue学习',
-            sidebarDepth: 2,
+            sidebarDepth: 0,
             children: [
               ['/vue/other/', '目录'],
               '/vue/other/组件通信/vue组件通信',
@@ -82,14 +81,14 @@ module.exports = {
 
       {
         title: 'Webpack',
-        collapsable: false,
-        sidebarDepth: 2,
+        collapsable: true,
+        sidebarDepth: 0,
         children: [['/webpack/', '目录']]
       },
       {
         title: 'CI/CD',
-        collapsable: false,
-        sidebarDepth: 2,
+        collapsable: true,
+        sidebarDepth: 0,
         children: [
           ['/CI/', 'CI'],
           ['/CD/', 'CD']
@@ -97,14 +96,14 @@ module.exports = {
       },
       {
         title: 'MarkDown',
-        collapsable: false,
-        sidebarDepth: 2,
+        collapsable: true,
+        sidebarDepth: 0,
         children: [['/markdown/', '目录']]
       },
       {
         title: 'Tools',
-        collapsable: false, // 可选的, 默认值是 true,
-        sidebarDepth: 2,
+        collapsable: true, // 可选的, 默认值是 true,
+        sidebarDepth: 0,
         children: [
           // ['/tools/', '目录'],
           // ['/tools/markdown/', 'MarkDown使用图床'],

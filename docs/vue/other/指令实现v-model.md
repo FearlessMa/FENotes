@@ -1,5 +1,6 @@
 # 指令实现v-model
 
+[[toc]]
 
 ```vue
 <template>

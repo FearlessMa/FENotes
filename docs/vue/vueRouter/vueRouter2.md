@@ -1,4 +1,5 @@
 # Vue Router (二)
+[[toc]]
 
 ## 1. [路由的导航守卫](https://router.vuejs.org/zh/guide/advanced/navigation-guards.html)
 

@@ -1,4 +1,5 @@
 # vue 基础入门（二）
+[[toc]]
 
 ## 1. options
 

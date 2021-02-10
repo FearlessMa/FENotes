@@ -1,4 +1,5 @@
 # Vue Router 
+[[toc]]
 
 ## 1. 安装
 

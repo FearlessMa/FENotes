@@ -1,4 +1,5 @@
 # vue单文件组件
+[[toc]]
 
 ## 1. [Vue 单文件组件 (SFC) 规范](https://vue-loader.vuejs.org/zh/spec.html)
 
