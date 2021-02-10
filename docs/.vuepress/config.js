@@ -86,15 +86,15 @@ module.exports = {
         sidebarDepth: 2,
         children: [['/webpack/', '目录']]
       },
-      // {
-      //   title: 'CI/CD',
-      //   collapsable: false,
-      //   sidebarDepth: 2,
-      //   children: [
-      //     ['/ci/', 'CI'],
-      //     ['/cd/', 'CD']
-      //   ]
-      // },
+      {
+        title: 'CI/CD',
+        collapsable: false,
+        sidebarDepth: 2,
+        children: [
+          ['/CI/', 'CI'],
+          ['/CD/', 'CD']
+        ]
+      },
       {
         title: 'MarkDown',
         collapsable: false,
