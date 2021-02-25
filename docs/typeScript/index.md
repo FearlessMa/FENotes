@@ -11,9 +11,9 @@
 > 
 > [了不起的 TypeScript 入门教程](http://www.semlinker.com/ts-comprehensive-tutorial/#%E4%B8%80%E3%80%81TypeScript-%E6%98%AF%E4%BB%80%E4%B9%88)
 > 
-> [ts代码检测](https://ts.xcatliu.com/engineering/lint.html)
+> [TS代码检测](https://ts.xcatliu.com/engineering/lint.html)
 > 
-> [从javascript迁移](https://jkchao.github.io/typescript-book-chinese/typings/migrating.html#%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BB%A3%E7%A0%81)
+> [从JavaScript迁移](https://jkchao.github.io/typescript-book-chinese/typings/migrating.html#%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BB%A3%E7%A0%81)
 
 
 * 1.初始化ts配置，生成tsconfig.json文件。`tsc --init`。 
