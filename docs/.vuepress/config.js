@@ -40,6 +40,14 @@ module.exports = {
         ]
       },
       {
+        title: 'TypeScript',
+        collapsable: true, // 可选的, 默认值是 true,
+        sidebarDepth: 0,
+        children: [
+          ['/typeScript/', '入门'],
+        ]
+      },
+      {
         title: 'Vue',
         collapsable: true, // 可选的, 默认值是 true,
         sidebarDepth: 0, // 可选的, 默认值是 1

@@ -3,7 +3,7 @@ home: true
 # heroImage: /hero.png
 heroText: FENotes
 tagline: 学习记录
-actionText: 快速上手 →
+actionText: 开始 →
 actionLink: /js/
 # features:
 # - title: 学习笔记
