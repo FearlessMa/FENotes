@@ -1,25 +1,29 @@
 
-## TypeScript 
+# TypeScript 
 
+[[toc]]
+
+## 命令&工具
+
+* 初始化ts配置，生成tsconfig.json文件。`tsc --init`。 
+* 使用node运行ts文件，安装`ts-node`。
+* `tsc` 命令增加参数后 tsconfig.json 配置文件会失效。
+* `typedoc`库，可以生产typescript文档，命令`typedoc --out docs src`。
+
+
+::: tip 参考
 [GitHubPages](https://fearlessma.github.io/typescript-notes/index.html)
 
-> 参考
-> 
-> [深入理解TypeScript](https://jkchao.github.io/typescript-book-chinese/)
-> 
-> [TypeScript入门教程](https://ts.xcatliu.com/)
-> 
-> [了不起的 TypeScript 入门教程](http://www.semlinker.com/ts-comprehensive-tutorial/#%E4%B8%80%E3%80%81TypeScript-%E6%98%AF%E4%BB%80%E4%B9%88)
-> 
-> [TS代码检测](https://ts.xcatliu.com/engineering/lint.html)
-> 
-> [从JavaScript迁移](https://jkchao.github.io/typescript-book-chinese/typings/migrating.html#%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BB%A3%E7%A0%81)
+[深入理解TypeScript](https://jkchao.github.io/typescript-book-chinese/)
 
+[TypeScript入门教程](https://ts.xcatliu.com/)
 
-* 1.初始化ts配置，生成tsconfig.json文件。`tsc --init`。 
-* 2.使用node运行ts文件，安装`ts-node`。
-* 3.`tsc` 命令增加参数后 tsconfig.json 配置文件会失效。
-* 4.`typedoc`库，可以生产typescript文档，命令`typedoc --out docs src`。
+[了不起的 TypeScript 入门教程](http://www.semlinker.com/ts-comprehensive-tutorial/#%E4%B8%80%E3%80%81TypeScript-%E6%98%AF%E4%BB%80%E4%B9%88)
+
+[TS代码检测](https://ts.xcatliu.com/engineering/lint.html)
+
+[从JavaScript迁移](https://jkchao.github.io/typescript-book-chinese/typings/migrating.html#%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BB%A3%E7%A0%81)
+:::
 
 
 ## 原始数据类型
