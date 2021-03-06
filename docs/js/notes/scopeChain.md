@@ -34,5 +34,5 @@ function outerFn() {
 outerFn()
 ```
 
-![image-20210305214959807](scopeChain.assets/image-20210305214959807.png)
+![image-20210305214959807](./scopeChain.assets/image-20210305214959807.png)
 

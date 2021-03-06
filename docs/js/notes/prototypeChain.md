@@ -34,4 +34,5 @@ console.log('Array.prototype.__proto__.__proto__ == null: ', Array.prototype.__p
    })
    ```
 
-   ![image-20210306170359567](prototypeChain.assets/image-20210306170359567.png)
+   ![image-20210306170359567](./prototypeChain.assets/image-20210306170359567.png)
+
