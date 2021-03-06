@@ -35,7 +35,12 @@ module.exports = {
           {
             title: '日常笔记',
             sidebarDepth: 0,
-            children: ['/js/notes/mouseWheel']
+            children: [
+              '/js/notes/mouseWheel',
+              'js/notes/closure',
+              'js/notes/scopeChain',
+              'js/notes/prototypeChain'
+            ]
           }
         ]
       },
