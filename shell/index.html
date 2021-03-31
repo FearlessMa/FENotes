@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>shell | FENotes</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="FENotes">
+    
+    <link rel="preload" href="/FENotes/assets/css/0.styles.794e6642.css" as="style"><link rel="preload" href="/FENotes/assets/js/app.3fd1f95e.js" as="script"><link rel="preload" href="/FENotes/assets/js/2.3f15f90d.js" as="script"><link rel="preload" href="/FENotes/assets/js/21.adc71642.js" as="script"><link rel="prefetch" href="/FENotes/assets/js/10.ffb86d6a.js"><link rel="prefetch" href="/FENotes/assets/js/11.d8e0637f.js"><link rel="prefetch" href="/FENotes/assets/js/12.92cae3fa.js"><link rel="prefetch" href="/FENotes/assets/js/13.9e0959d9.js"><link rel="prefetch" href="/FENotes/assets/js/14.eebd2b37.js"><link rel="prefetch" href="/FENotes/assets/js/15.faf62832.js"><link rel="prefetch" href="/FENotes/assets/js/16.91cdc64b.js"><link rel="prefetch" href="/FENotes/assets/js/17.34c11a9e.js"><link rel="prefetch" href="/FENotes/assets/js/18.17bda2f9.js"><link rel="prefetch" href="/FENotes/assets/js/19.4965244f.js"><link rel="prefetch" href="/FENotes/assets/js/20.bd82ba0a.js"><link rel="prefetch" href="/FENotes/assets/js/22.71dcf308.js"><link rel="prefetch" href="/FENotes/assets/js/23.4a1241e0.js"><link rel="prefetch" href="/FENotes/assets/js/24.57b54f4a.js"><link rel="prefetch" href="/FENotes/assets/js/25.89595f97.js"><link rel="prefetch" href="/FENotes/assets/js/26.2340e7c6.js"><link rel="prefetch" href="/FENotes/assets/js/27.33d6c9c3.js"><link rel="prefetch" href="/FENotes/assets/js/28.8e6218f9.js"><link rel="prefetch" href="/FENotes/assets/js/29.34ff9949.js"><link rel="prefetch" href="/FENotes/assets/js/3.9e73f66c.js"><link rel="prefetch" href="/FENotes/assets/js/30.a743dc07.js"><link rel="prefetch" href="/FENotes/assets/js/31.a5b34703.js"><link rel="prefetch" href="/FENotes/assets/js/32.ec129671.js"><link rel="prefetch" href="/FENotes/assets/js/33.ddc8ffd5.js"><link rel="prefetch" href="/FENotes/assets/js/34.f3a38910.js"><link rel="prefetch" href="/FENotes/assets/js/35.d455df2a.js"><link rel="prefetch" href="/FENotes/assets/js/36.458c7ceb.js"><link rel="prefetch" href="/FENotes/assets/js/37.a053b4b4.js"><link rel="prefetch" href="/FENotes/assets/js/38.419805ed.js"><link rel="prefetch" href="/FENotes/assets/js/39.e4390b1e.js"><link rel="prefetch" href="/FENotes/assets/js/4.17826e73.js"><link rel="prefetch" href="/FENotes/assets/js/40.47947ce3.js"><link rel="prefetch" href="/FENotes/assets/js/41.b5d28e61.js"><link rel="prefetch" href="/FENotes/assets/js/5.48ce8d0f.js"><link rel="prefetch" href="/FENotes/assets/js/6.8013a822.js"><link rel="prefetch" href="/FENotes/assets/js/7.b927ea52.js"><link rel="prefetch" href="/FENotes/assets/js/8.aa705b6f.js"><link rel="prefetch" href="/FENotes/assets/js/9.5262d629.js">
+    <link rel="stylesheet" href="/FENotes/assets/css/0.styles.794e6642.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/FENotes/" class="home-link router-link-active"><!----> <span class="site-name">FENotes</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/FENotes/js/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/FENotes/shell/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  shell
+</a></div><div class="nav-item"><a href="/FENotes/java/" class="nav-link">
+  java
+</a></div><div class="nav-item"><a href="https://github.com/FearlessMa/FENotes" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/FearlessMa/FENotes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/FENotes/js/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/FENotes/shell/" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  shell
+</a></div><div class="nav-item"><a href="/FENotes/java/" class="nav-link">
+  java
+</a></div><div class="nav-item"><a href="https://github.com/FearlessMa/FENotes" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://github.com/FearlessMa/FENotes" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>JavaScript</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/FENotes/js/" class="sidebar-link">目录</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>日常笔记</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>TypeScript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Webpack</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>DevOps</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MarkDown</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Tools</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="shell"><a href="#shell" class="header-anchor">#</a> shell</h1> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token shebang important">#! /bin/sh</span>
+<span class="token comment">#  /bin/sh 是指此脚本使用/bin/sh来解释执行，#!是特殊的表示符，其后面跟的是解释此脚本的shell的路径</span>
+
+<span class="token builtin class-name">set</span> -e
+<span class="token comment"># 你写的每个脚本都应该在文件开头加上set -e,这句语句告诉bash如果任何语句的执行结果不是true则应该退出。</span>
+
+<span class="token assign-left variable">username</span><span class="token operator">=</span><span class="token string">'abc'</span>
+
+<span class="token assign-left variable">age</span><span class="token operator">=</span><span class="token number">20</span>
+
+
+<span class="token builtin class-name">echo</span> username
+<span class="token builtin class-name">echo</span> <span class="token variable">$username</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">${username}</span>
+
+<span class="token comment"># 单引号</span>
+<span class="token builtin class-name">echo</span> <span class="token string">'name='</span><span class="token variable">$username</span><span class="token string">',age='</span><span class="token variable">$age</span><span class="token string">''</span>
+<span class="token builtin class-name">echo</span> <span class="token string">'name=<span class="token variable">${username}</span>,age=<span class="token variable">${age}</span>'</span>
+<span class="token comment"># 双引号</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;name=&quot;</span><span class="token variable">$username</span><span class="token string">&quot;,age=&quot;</span><span class="token variable">$age</span><span class="token string">&quot;&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;name=<span class="token variable">${username}</span>,age=<span class="token variable">${age}</span>&quot;</span>
+
+<span class="token comment"># 获取字符串长度</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;username length <span class="token variable">${<span class="token operator">#</span>username}</span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;age length <span class="token variable">${<span class="token operator">#</span>age}</span>&quot;</span>
+
+<span class="token comment"># 提取子字符串</span>
+<span class="token builtin class-name">echo</span> -e <span class="token string">&quot;username=<span class="token variable">${username}</span> <span class="token entity" title="\n">\n</span> length=<span class="token variable">${<span class="token operator">#</span>username}</span> <span class="token entity" title="\n">\n</span> slice(1,2):<span class="token variable">${username<span class="token operator">:</span>1<span class="token operator">:</span>2}</span>&quot;</span>
+
+<span class="token comment">#  -e 开启转义 -c 不换行</span>
+<span class="token builtin class-name">echo</span> -e <span class="token string">&quot;<span class="token entity" title="\n">\n</span> 1 <span class="token entity" title="\n">\n</span>&quot;</span>
+
+<span class="token comment"># 定义数组</span>
+<span class="token assign-left variable">arr</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token number">2</span> <span class="token number">3</span> <span class="token number">4</span> <span class="token number">5</span><span class="token punctuation">)</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;数组 arr=<span class="token variable">${arr<span class="token punctuation">[</span>@<span class="token punctuation">]</span>}</span>,length=<span class="token variable">${<span class="token operator">#</span>arr<span class="token punctuation">[</span>@<span class="token punctuation">]</span>}</span>, arr[0]=<span class="token variable">${arr<span class="token punctuation">[</span>0<span class="token punctuation">]</span>}</span>&quot;</span>
+
+<span class="token comment"># 参数传递</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Shell 传递参数实例！&quot;</span><span class="token punctuation">;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;执行的文件名：<span class="token variable">$0</span>&quot;</span><span class="token punctuation">;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;第一个参数为：<span class="token variable">$1</span>&quot;</span><span class="token punctuation">;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;第二个参数为：<span class="token variable">$2</span>&quot;</span><span class="token punctuation">;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;第三个参数为：<span class="token variable">$3</span>&quot;</span><span class="token punctuation">;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;传递参数的个数 <span class="token variable">$#</span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;以一个单字符串显示所有向脚本传递的参数: <span class="token variable">$*</span>&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;显示最后命令的退出状态: <span class="token variable">$?</span>&quot;</span>
+
+<span class="token comment"># 运算符</span>
+<span class="token comment"># 表达式和运算符之间要有空格，例如 2+2 是不对的，必须写成 2 + 2，这与我们熟悉的大多数编程语言不一样。</span>
+<span class="token comment"># a=$b 将把变量 b 的值赋给 a。</span>
+
+<span class="token assign-left variable">val</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">expr</span> <span class="token number">1</span> + <span class="token number">1</span> <span class="token variable">`</span></span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;val=<span class="token variable">$val</span>&quot;</span>
+<span class="token assign-left variable">a</span><span class="token operator">=</span><span class="token number">1</span>
+<span class="token assign-left variable">b</span><span class="token operator">=</span><span class="token number">2</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;a+b = <span class="token variable"><span class="token variable">`</span><span class="token function">expr</span> $a + $b<span class="token variable">`</span></span>&quot;</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$a</span> <span class="token operator">!=</span> <span class="token variable">$b</span> <span class="token punctuation">]</span>
+<span class="token keyword">then</span>
+  <span class="token builtin class-name">echo</span> <span class="token string">&quot;a 不等于 b&quot;</span>
+<span class="token keyword">fi</span>
+
+<span class="token comment"># 关系运算符</span>
+<span class="token comment"># -eq	检测两个数是否相等，相等返回 true。	[ $a -eq $b ] 返回 false。</span>
+<span class="token comment"># -ne	检测两个数是否不相等，不相等返回 true。	[ $a -ne $b ] 返回 true。</span>
+<span class="token comment"># -gt	检测左边的数是否大于右边的，如果是，则返回 true。	[ $a -gt $b ] 返回 false。</span>
+<span class="token comment"># -lt	检测左边的数是否小于右边的，如果是，则返回 true。	[ $a -lt $b ] 返回 true。</span>
+<span class="token comment"># -ge	检测左边的数是否大于等于右边的，如果是，则返回 true。	[ $a -ge $b ] 返回 false。</span>
+<span class="token comment"># -le	检测左边的数是否小于等于右边的，如果是，则返回 true。	[ $a -le $b ] 返回 true。</span>
+
+
+<span class="token comment"># 运算符	说明	举例</span>
+<span class="token comment"># !	非运算，表达式为 true 则返回 false，否则返回 true。	[ ! false ] 返回 true。</span>
+<span class="token comment"># -o	或运算，有一个表达式为 true 则返回 true。	[ $a -lt 20 -o $b -gt 100 ] 返回 true。</span>
+<span class="token comment"># -a	与运算，两个表达式都为 true 才返回 true。</span>
+
+<span class="token comment"># 运算符	说明	举例</span>
+<span class="token comment"># &amp;&amp;	逻辑的 AND	[[ $a -lt 100 &amp;&amp; $b -gt 100 ]] 返回 false</span>
+<span class="token comment"># ||	逻辑的 OR	[[ $a -lt 100 || $b -gt 100 ]] 返回 true</span>
+
+<span class="token comment"># 字符串</span>
+<span class="token comment"># 运算符	说明	举例</span>
+<span class="token comment"># =	检测两个字符串是否相等，相等返回 true。	[ $a = $b ] 返回 false。</span>
+<span class="token comment"># !=	检测两个字符串是否相等，不相等返回 true。	[ $a != $b ] 返回 true。</span>
+<span class="token comment"># -z	检测字符串长度是否为0，为0返回 true。	[ -z $a ] 返回 false。</span>
+<span class="token comment"># -n	检测字符串长度是否不为 0，不为 0 返回 true。	[ -n &quot;$a&quot; ] 返回 true。</span>
+<span class="token comment"># $	检测字符串是否为空，不为空返回 true。	[ $a ] 返回 true。</span>
+
+
+
+<span class="token comment"># 操作符	说明	举例</span>
+<span class="token comment"># -b file	检测文件是否是块设备文件，如果是，则返回 true。	[ -b $file ] 返回 false。</span>
+<span class="token comment"># -c file	检测文件是否是字符设备文件，如果是，则返回 true。	[ -c $file ] 返回 false。</span>
+<span class="token comment"># -d file	检测文件是否是目录，如果是，则返回 true。	[ -d $file ] 返回 false。</span>
+<span class="token comment"># -f file	检测文件是否是普通文件（既不是目录，也不是设备文件），如果是，则返回 true。	[ -f $file ] 返回 true。</span>
+<span class="token comment"># -g file	检测文件是否设置了 SGID 位，如果是，则返回 true。	[ -g $file ] 返回 false。</span>
+<span class="token comment"># -k file	检测文件是否设置了粘着位(Sticky Bit)，如果是，则返回 true。	[ -k $file ] 返回 false。</span>
+<span class="token comment"># -p file	检测文件是否是有名管道，如果是，则返回 true。	[ -p $file ] 返回 false。</span>
+<span class="token comment"># -u file	检测文件是否设置了 SUID 位，如果是，则返回 true。	[ -u $file ] 返回 false。</span>
+<span class="token comment"># -r file	检测文件是否可读，如果是，则返回 true。	[ -r $file ] 返回 true。</span>
+<span class="token comment"># -w file	检测文件是否可写，如果是，则返回 true。	[ -w $file ] 返回 true。</span>
+<span class="token comment"># -x file	检测文件是否可执行，如果是，则返回 true。	[ -x $file ] 返回 true。</span>
+<span class="token comment"># -s file	检测文件是否为空（文件大小是否大于0），不为空返回 true。	[ -s $file ] 返回 true。</span>
+<span class="token comment"># -e file	检测文件（包括目录）是否存在，如果是，则返回 true。	[ -e $file ] 返回 true。</span>
+
+
+<span class="token assign-left variable">filePath</span><span class="token operator">=</span><span class="token string">&quot;./learn.sh&quot;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">[</span> -f <span class="token variable">$filePath</span> <span class="token punctuation">]</span>
+<span class="token keyword">then</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$filePath</span> 是普通文件&quot;</span>
+<span class="token keyword">fi</span>
+
+<span class="token comment"># read 命令从标准输入中读取一行,并把输入行的每个字段的值指定给 shell 变量</span>
+<span class="token comment"># read name</span>
+<span class="token comment"># echo $name</span>
+
+<span class="token comment"># 显示结果定向至文件 &gt;</span>
+<span class="token assign-left variable">fileName</span><span class="token operator">=</span><span class="token string">&quot;./echo.txt&quot;</span>
+<span class="token comment"># 检测 echo.txt 是否存在</span>
+<span class="token keyword">if</span> <span class="token punctuation">[</span><span class="token punctuation">[</span> -w <span class="token variable">$fileName</span>  <span class="token operator">&amp;&amp;</span> -f <span class="token variable">$fileName</span> <span class="token punctuation">]</span><span class="token punctuation">]</span>
+<span class="token keyword">then</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$fileName</span> 可写&quot;</span>
+<span class="token comment"># 输入到指定文件</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$name</span> <span class="token operator">&gt;</span> <span class="token variable">$fileName</span>
+<span class="token keyword">else</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;<span class="token variable">$fileName</span> 不可写&quot;</span>
+<span class="token keyword">fi</span>
+
+<span class="token comment"># 显示命令执行结果</span>
+<span class="token builtin class-name">echo</span> <span class="token variable"><span class="token variable">`</span><span class="token function">date</span><span class="token variable">`</span></span>
+
+<span class="token comment"># printf </span>
+<span class="token comment"># %s %c %d %f都是格式替代符</span>
+<span class="token comment"># %-10s 指一个宽度为10个字符（-表示左对齐，没有则表示右对齐），任何字符都会被显示在10个字符宽的字符内，</span>
+<span class="token comment"># 如果不足则自动以空格填充，超过也会将内容全部显示出来。</span>
+<span class="token comment"># %-4.2f 指格式化为小数，其中.2指保留2位小数</span>
+
+<span class="token builtin class-name">printf</span> <span class="token string">&quot;%-10s %-8s %-4s<span class="token entity" title="\n">\n</span>&quot;</span> 姓名 性别 体重kg  
+<span class="token builtin class-name">printf</span> <span class="token string">&quot;%-10s %-8s %-4.2f<span class="token entity" title="\n">\n</span>&quot;</span> 郭靖 男 <span class="token number">66.1234</span> 
+<span class="token builtin class-name">printf</span> <span class="token string">&quot;%-10s %-8s %-4.2f<span class="token entity" title="\n">\n</span>&quot;</span> 杨过 男 <span class="token number">48.6543</span> 
+<span class="token builtin class-name">printf</span> <span class="token string">&quot;%-10s %-8s %-4.2f<span class="token entity" title="\n">\n</span>&quot;</span> 郭芙 女 <span class="token number">47.9876</span> 
+
+<span class="token comment"># Shell中的 test 命令用于检查某个条件是否成立，它可以进行数值、字符和文件三个方面的测试。</span>
+
+<span class="token assign-left variable">num1</span><span class="token operator">=</span><span class="token string">&quot;ru1noob&quot;</span>
+<span class="token assign-left variable">num2</span><span class="token operator">=</span><span class="token string">&quot;runoob&quot;</span>
+<span class="token keyword">if</span> <span class="token builtin class-name">test</span> <span class="token variable">$num1</span> <span class="token operator">=</span> <span class="token variable">$num2</span>
+<span class="token keyword">then</span>
+  <span class="token builtin class-name">echo</span> <span class="token string">'两个字符串相等!'</span>
+<span class="token keyword">else</span>
+  <span class="token builtin class-name">echo</span> <span class="token string">'两个字符串不相等!'</span>
+<span class="token keyword">fi</span>
+
+<span class="token comment"># if else-if else</span>
+<span class="token comment"># if else-if else 语法格式：</span>
+<span class="token comment"># if condition1</span>
+<span class="token comment"># then</span>
+<span class="token comment">#     command1</span>
+<span class="token comment"># elif condition2 </span>
+<span class="token comment"># then </span>
+<span class="token comment">#     command2</span>
+<span class="token comment"># else</span>
+<span class="token comment">#     commandN</span>
+<span class="token comment"># fi</span>
+
+
+<span class="token comment"># for 循环</span>
+
+<span class="token keyword">for</span> <span class="token for-or-select variable">loop</span> <span class="token keyword">in</span> <span class="token number">1</span> <span class="token number">2</span> <span class="token number">3</span> <span class="token number">4</span> <span class="token number">5</span>
+<span class="token keyword">do</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$loop</span>
+<span class="token keyword">done</span>
+
+<span class="token comment"># while </span>
+<span class="token comment"># 以上实例使用了 Bash let 命令，它用于执行一个或多个表达式，变量计算中不需要加上 $ 来表示变量，具体可查阅：Bash let 命令</span>
+
+<span class="token assign-left variable">int</span><span class="token operator">=</span><span class="token number">1</span>
+
+<span class="token keyword">while</span> <span class="token variable"><span class="token punctuation">((</span>int<span class="token operator">&lt;</span><span class="token number">5</span><span class="token punctuation">))</span></span>
+<span class="token keyword">do</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;int=<span class="token variable">$int</span>&quot;</span>
+<span class="token comment"># let &quot;int++&quot;</span>
+<span class="token assign-left variable">int</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">expr</span> $int + <span class="token number">1</span><span class="token variable">`</span></span>
+<span class="token keyword">done</span>
+
+<span class="token comment"># case</span>
+<span class="token comment"># case ... esac 与其他语言中的 switch ... case 语句类似，是一种多分枝选择结构，</span>
+<span class="token comment"># 每个 case 分支用右圆括号开始，用两个分号 ;; 表示 break，即执行结束，跳出整个 case ... esac 语句，</span>
+<span class="token comment"># esac（就是 case 反过来）作为结束标记。</span>
+
+
+
+<span class="token comment"># echo '输入 1 到 4 之间的数字:'</span>
+<span class="token comment"># echo '你输入的数字为:'</span>
+<span class="token builtin class-name">read</span> aNum
+<span class="token keyword">case</span> <span class="token variable">$aNum</span> <span class="token keyword">in</span>
+    <span class="token number">1</span><span class="token punctuation">)</span>  <span class="token builtin class-name">echo</span> <span class="token string">'你选择了 1'</span>
+    <span class="token punctuation">;</span><span class="token punctuation">;</span>
+    <span class="token number">2</span><span class="token punctuation">)</span>  <span class="token builtin class-name">echo</span> <span class="token string">'你选择了 2'</span>
+    <span class="token punctuation">;</span><span class="token punctuation">;</span>
+    <span class="token number">3</span><span class="token punctuation">)</span>  <span class="token builtin class-name">echo</span> <span class="token string">'你选择了 3'</span>
+    <span class="token punctuation">;</span><span class="token punctuation">;</span>
+    <span class="token number">4</span><span class="token punctuation">)</span>  <span class="token builtin class-name">echo</span> <span class="token string">'你选择了 4'</span>
+    <span class="token punctuation">;</span><span class="token punctuation">;</span>
+    *<span class="token punctuation">)</span>  <span class="token builtin class-name">echo</span> <span class="token string">'你没有输入 1 到 4 之间的数字'</span>
+    <span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token keyword">esac</span>
+
+
+<span class="token comment"># linux shell 可以用户定义函数，然后在shell脚本中可以随便调用。</span>
+<span class="token comment"># shell中函数的定义格式如下：</span>
+<span class="token comment"># [ function ] funname [()]</span>
+<span class="token comment"># {</span>
+<span class="token comment">#     action;</span>
+<span class="token comment">#     [return int;]</span>
+<span class="token comment"># }</span>
+<span class="token comment"># 说明：</span>
+<span class="token comment"># 1、可以带function fun() 定义，也可以直接fun() 定义,不带任何参数。</span>
+<span class="token comment"># 2、参数返回，可以显示加：return 返回，如果不加，将以最后一条命令运行结果，作为返回值。 return后跟数值n(0-255</span>
+
+<span class="token function-name function">demoFun</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;这是我的第一个 shell 函数!&quot;</span>
+<span class="token punctuation">}</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;-----函数开始执行-----&quot;</span>
+demoFun
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;-----函数执行完毕-----&quot;</span>
+
+<span class="token comment"># 函数参数</span>
+
+<span class="token function-name function">funWithParam</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;第一个参数为 <span class="token variable">$1</span> !&quot;</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;第二个参数为 <span class="token variable">$2</span> !&quot;</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;第十个参数为 <span class="token variable">$10</span> !&quot;</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;第十个参数为 <span class="token variable">${10}</span> !&quot;</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;第十一个参数为 <span class="token variable">${11}</span> !&quot;</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;参数总数有 <span class="token variable">$#</span> 个!&quot;</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">&quot;作为一个字符串输出所有参数 <span class="token variable">$*</span> !&quot;</span>
+<span class="token punctuation">}</span>
+funWithParam <span class="token number">1</span> <span class="token number">2</span> <span class="token number">3</span> <span class="token number">4</span> <span class="token number">5</span> <span class="token number">6</span> <span class="token number">7</span> <span class="token number">8</span> <span class="token number">9</span> <span class="token number">34</span> <span class="token number">73</span>
+
+<span class="token comment"># 大多数 UNIX 系统命令从你的终端接受输入并将所产生的输出发送回​​到您的终端。</span>
+<span class="token comment"># 一个命令通常从一个叫标准输入的地方读取输入，默认情况下，这恰好是你的终端。</span>
+<span class="token comment"># 同样，一个命令通常将其输出写入到标准输出，默认情况下，这也是你的终端。</span>
+
+<span class="token comment"># 重定向命令列表如下：</span>
+
+<span class="token comment"># 命令	说明</span>
+<span class="token comment"># command &gt; file	将输出重定向到 file。</span>
+<span class="token comment"># command &lt; file	将输入重定向到 file。</span>
+<span class="token comment"># command &gt;&gt; file	将输出以追加的方式重定向到 file。</span>
+<span class="token comment"># n &gt; file	将文件描述符为 n 的文件重定向到 file。</span>
+<span class="token comment"># n &gt;&gt; file	将文件描述符为 n 的文件以追加的方式重定向到 file。</span>
+<span class="token comment"># n &gt;&amp; m	将输出文件 m 和 n 合并。</span>
+<span class="token comment"># n &lt;&amp; m	将输入文件 m 和 n 合并。</span>
+<span class="token comment"># &lt;&lt; tag	将开始标记 tag 和结束标记 tag 之间的内容作为输入。</span>
+<span class="token comment"># 需要注意的是文件描述符 0 通常是标准输入（STDIN），1 是标准输出（STDOUT），2 是标准错误输出（STDERR）。</span>
+
+<span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token string">'123'</span>
+<span class="token comment"># 重定向输出</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$name</span> <span class="token operator">&gt;</span> <span class="token string">&quot;echo.txt&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$name</span> <span class="token operator">&gt;&gt;</span> <span class="token string">&quot;echo.txt&quot;</span>
+<span class="token comment"># 重定向输入</span>
+
+<span class="token comment"># 文件执行命令</span>
+<span class="token function">wc</span> -l <span class="token operator">&lt;</span> <span class="token string">&quot;a.txt&quot;</span>
+<span class="token comment">#  将文件执行命令结果输出到文件</span>
+<span class="token comment"># command &lt; file1 &gt;file2</span>
+<span class="token comment"># command 命令将 stdin 重定向到 file1，将 stdout 重定向到 file2。</span>
+
+<span class="token function">wc</span> -l <span class="token operator">&lt;</span> <span class="token string">&quot;a.txt&quot;</span> <span class="token operator">&gt;</span> echo.txt
+
+<span class="token comment"># a &lt; &quot;a.txt&quot;</span>
+
+<span class="token comment"># b &lt;&lt; &quot;a.txt&quot;</span>
+<span class="token comment"># b &lt;&lt; delimiter</span>
+<span class="token comment">#     &quot;a.txt&quot;</span>
+<span class="token comment"># delimiter</span>
+
+<span class="token function">cat</span> <span class="token string">&quot;echo.txt&quot;</span>
+
+<span class="token function">cat</span> <span class="token operator">&lt;</span> <span class="token string">&quot;a.txt&quot;</span> <span class="token operator">&gt;</span> <span class="token string">&quot;echo.txt&quot;</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;cat a.txt 到 echo.txt&quot;</span>
+<span class="token function">cat</span> <span class="token string">&quot;echo.txt&quot;</span>
+
+<span class="token comment"># /dev/null 文件</span>
+<span class="token comment"># 如果希望执行某个命令，但又不希望在屏幕上显示输出结果，那么可以将输出重定向到 /dev/null：</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;cat 命令执行结果不显示在命令行&quot;</span>
+<span class="token function">cat</span> <span class="token string">&quot;echo.txt&quot;</span> <span class="token operator">&gt;</span> /dev/null
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;cat 执行结束&quot;</span>
+
+<span class="token comment"># 重定向深入讲解</span>
+<span class="token comment"># 一般情况下，每个 Unix/Linux 命令运行时都会打开三个文件：</span>
+<span class="token comment"># 标准输入文件(stdin)：stdin的文件描述符为0，Unix程序默认从stdin读取数据。</span>
+<span class="token comment"># 标准输出文件(stdout)：stdout 的文件描述符为1，Unix程序默认向stdout输出数据。</span>
+<span class="token comment"># 标准错误文件(stderr)：stderr的文件描述符为2，Unix程序会向stderr流中写入错误信息。</span>
+<span class="token comment"># 默认情况下，command &gt; file 将 stdout 重定向到 file，command &lt; file 将stdin 重定向到 file。</span>
+<span class="token comment"># 如果希望 stderr 重定向到 file，可以这样写：</span>
+<span class="token comment">#  command 2 &gt; file</span>
+<span class="token comment"># 如果希望 stderr 追加到 file 文件末尾，可以这样写：</span>
+<span class="token comment">#  command 2 &gt;&gt; file</span>
+<span class="token comment"># 2 表示标准错误文件(stderr)。</span>
+<span class="token comment"># 如果希望将 stdout 和 stderr 合并后重定向到 file，可以这样写：</span>
+<span class="token comment"># $ command &gt; file 2&gt;&amp;1</span>
+<span class="token comment"># 或者</span>
+<span class="token comment"># $ command &gt;&gt; file 2&gt;&amp;1</span>
+<span class="token comment"># 如果希望对 stdin 和 stdout 都重定向，可以这样写：</span>
+<span class="token comment"># $ command &lt; file1 &gt;file2</span>
+<span class="token comment"># command 命令将 stdin 重定向到 file1，将 stdout 重定向到 file2。</span>
+
+
+<span class="token comment"># 读取文件</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;读取文件&quot;</span>
+<span class="token keyword">while</span> <span class="token builtin class-name">read</span> line
+<span class="token keyword">do</span>
+<span class="token builtin class-name">echo</span> <span class="token variable">$line</span>
+<span class="token keyword">done</span> <span class="token operator">&lt;</span> test.txt
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;读取文件结束&quot;</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br><span class="line-number">239</span><br><span class="line-number">240</span><br><span class="line-number">241</span><br><span class="line-number">242</span><br><span class="line-number">243</span><br><span class="line-number">244</span><br><span class="line-number">245</span><br><span class="line-number">246</span><br><span class="line-number">247</span><br><span class="line-number">248</span><br><span class="line-number">249</span><br><span class="line-number">250</span><br><span class="line-number">251</span><br><span class="line-number">252</span><br><span class="line-number">253</span><br><span class="line-number">254</span><br><span class="line-number">255</span><br><span class="line-number">256</span><br><span class="line-number">257</span><br><span class="line-number">258</span><br><span class="line-number">259</span><br><span class="line-number">260</span><br><span class="line-number">261</span><br><span class="line-number">262</span><br><span class="line-number">263</span><br><span class="line-number">264</span><br><span class="line-number">265</span><br><span class="line-number">266</span><br><span class="line-number">267</span><br><span class="line-number">268</span><br><span class="line-number">269</span><br><span class="line-number">270</span><br><span class="line-number">271</span><br><span class="line-number">272</span><br><span class="line-number">273</span><br><span class="line-number">274</span><br><span class="line-number">275</span><br><span class="line-number">276</span><br><span class="line-number">277</span><br><span class="line-number">278</span><br><span class="line-number">279</span><br><span class="line-number">280</span><br><span class="line-number">281</span><br><span class="line-number">282</span><br><span class="line-number">283</span><br><span class="line-number">284</span><br><span class="line-number">285</span><br><span class="line-number">286</span><br><span class="line-number">287</span><br><span class="line-number">288</span><br><span class="line-number">289</span><br><span class="line-number">290</span><br><span class="line-number">291</span><br><span class="line-number">292</span><br><span class="line-number">293</span><br><span class="line-number">294</span><br><span class="line-number">295</span><br><span class="line-number">296</span><br><span class="line-number">297</span><br><span class="line-number">298</span><br><span class="line-number">299</span><br><span class="line-number">300</span><br><span class="line-number">301</span><br><span class="line-number">302</span><br><span class="line-number">303</span><br><span class="line-number">304</span><br><span class="line-number">305</span><br><span class="line-number">306</span><br><span class="line-number">307</span><br><span class="line-number">308</span><br><span class="line-number">309</span><br><span class="line-number">310</span><br><span class="line-number">311</span><br><span class="line-number">312</span><br><span class="line-number">313</span><br><span class="line-number">314</span><br><span class="line-number">315</span><br><span class="line-number">316</span><br><span class="line-number">317</span><br><span class="line-number">318</span><br><span class="line-number">319</span><br><span class="line-number">320</span><br><span class="line-number">321</span><br></div></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/FearlessMa/FENotes/edit/master/docs/shell/index.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/FENotes/assets/js/app.3fd1f95e.js" defer></script><script src="/FENotes/assets/js/2.3f15f90d.js" defer></script><script src="/FENotes/assets/js/21.adc71642.js" defer></script>
+  </body>
+</html>
