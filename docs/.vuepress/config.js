@@ -13,6 +13,8 @@ module.exports = {
     home: true,
     nav: [
       { text: '主页', link: '/js/' },
+      { text: 'shell', link: '/shell/' },
+      { text: 'java', link: '/java/' },
       { text: 'GitHub', link: 'https://github.com/FearlessMa/FENotes' }
     ],
     editLinks: false,
@@ -58,6 +60,7 @@ module.exports = {
         sidebarDepth: 0, // 可选的, 默认值是 1
         children: [
           ['/vue/', '目录'],
+          ['/vue/source/',"vue源码"],
           {
             title: 'vue基础',
             sidebarDepth: 0,
