@@ -1,5 +1,5 @@
 
-# CI文章
+# ci文章
 
 此项目已从`Travis-CI`迁移到`GitHub Action`
 
@@ -12,3 +12,8 @@
 
 1. [GitHub Actions 入门教程](http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html)
 2. [使用 GitHub Actions 自动部署博客教程](https://segmentfault.com/a/1190000021815477)
+
+**commit工具**
+
+1. [@fearless-ma/auto-commit](https://www.npmjs.com/package/@fearless-ma/auto-commit)
+2. [auto-commit仓库](https://github.com/FearlessMa/auto-commit#readme)

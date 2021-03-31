@@ -102,12 +102,12 @@ module.exports = {
         children: [['/webpack/', '目录']]
       },
       {
-        title: 'CI/CD',
+        title: 'DevOps',
         collapsable: true,
         sidebarDepth: 0,
         children: [
-          ['/CI/', 'CI'],
-          ['/CD/', 'CD']
+          ['/devops/', '目录'],
+          ['/devops/ci/', 'CI持续集成'],
         ]
       },
       {
