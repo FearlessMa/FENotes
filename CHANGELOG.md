@@ -1,3 +1,25 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.4.0](https://github.com/FearlessMa/FENotes/compare/v1.3.0...v1.4.0) (2021-12-03)
+
+
+### Features
+
+* cI ([623e490](https://github.com/FearlessMa/FENotes/commit/623e490157aa34905c2c69d11f18a679abea790f))
+* img ([e6acc59](https://github.com/FearlessMa/FENotes/commit/e6acc59c91a810ab705bc44bc67c6931534b256c))
+* js更新 ([8d2c774](https://github.com/FearlessMa/FENotes/commit/8d2c774dcc5a37d666803b767d5ca328fb0605ea))
+* 优化显示 ([472a0b3](https://github.com/FearlessMa/FENotes/commit/472a0b31ac2a74a886b76962ab50050d54bb4c57))
+* 优化首页显示 ([5e639b9](https://github.com/FearlessMa/FENotes/commit/5e639b90b291d170ac567ce187755cd1110a7655))
+* 修改格式 ([1a1d0bf](https://github.com/FearlessMa/FENotes/commit/1a1d0bf5bbf5859b57e2fb2f46ce806acb774059))
+* 增加commit工具 ([aae440c](https://github.com/FearlessMa/FENotes/commit/aae440c85c5be73ea898ec116f08c554a79fce32))
+* 增加java shell 笔记 ([d2c1fbb](https://github.com/FearlessMa/FENotes/commit/d2c1fbb948093df7f738be6dd7b95095e7e84c66))
+* 增加ts学习入门 ([b196dfd](https://github.com/FearlessMa/FENotes/commit/b196dfd104b46f02def6f62b123acf6c19b23289))
+* 增加主页 ([6d9cf6b](https://github.com/FearlessMa/FENotes/commit/6d9cf6b1df3b86203255945d67276763ff52ef33))
+* 更新信息 ([ae62b99](https://github.com/FearlessMa/FENotes/commit/ae62b9991736f0fc123a2474bb8438873ccb4979))
+* 隐藏cicd ([fa2ca50](https://github.com/FearlessMa/FENotes/commit/fa2ca50a4e362fc516e4ede5485b90384c441444))
+
 # [1.3.0](https://github.com/FearlessMa/FENotes/compare/v1.2.0...v1.3.0) (2020-09-23)
 
 
@@ -64,6 +86,3 @@
 * 增加图片 ([d5c4cd3](https://github.com/FearlessMa/FENotes/commit/d5c4cd3afd5ab73b37b4eca34ed25939b57db152))
 * 更新 vue 基础 五 ([47b6e9d](https://github.com/FearlessMa/FENotes/commit/47b6e9d47fb956477e267b1932f36e2853886b26))
 * 更新基础二 ([74287f4](https://github.com/FearlessMa/FENotes/commit/74287f4d6a72daf987798c1edf587ec153b466e9))
-
-
-
