@@ -3,7 +3,7 @@
 
 1. 构建镜像
 
-   ```
+   ```bash
    docker build -t 镜像名称 .
    ```
 
@@ -11,13 +11,13 @@
 
 2. 删除镜像
 
-   ```
+   ```bash
    docker rmi  IMAGES_ID
    ```
 
 3. 查看、停用、删除容器
 
-   ```
+   ```bash
    docker ps -a | grep 容器name
    docker stop CONTAINER_ID
    docker rm  CONTAINER_ID
@@ -31,7 +31,7 @@
 
 5. run
 
-   ```
+   ```bash
    docker run -d -p 8080:80 --name webserver nginx
    ```
 
@@ -50,7 +50,7 @@
 
 6. rm
 
-   ```
+   ```bash
    docker rm -f $(docker ps -a | grep Exit | awk '{ print $1 }')
    ```
 

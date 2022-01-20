@@ -222,18 +222,33 @@ module.exports = {
               ['/VsCodePlugin/extension-guides/', '概述'],
               ['/VsCodePlugin/extension-guides/command.md', '命令'],
               ['/VsCodePlugin/extension-guides/color-theme.md', '色彩主题'],
-              ['/VsCodePlugin/extension-guides/file-icon-theme', '文件图标主题'],
-              ['/VsCodePlugin/extension-guides/product-icon-theme', '产品图标主题'],
+              [
+                '/VsCodePlugin/extension-guides/file-icon-theme',
+                '文件图标主题'
+              ],
+              [
+                '/VsCodePlugin/extension-guides/product-icon-theme',
+                '产品图标主题'
+              ],
               ['/VsCodePlugin/extension-guides/tree-view', '树视图'],
               ['/VsCodePlugin/extension-guides/webview', 'Webview'],
               ['/VsCodePlugin/extension-guides/notebook', '笔记本'],
               ['/VsCodePlugin/extension-guides/virtual-documents', '虚拟文档'],
               ['/VsCodePlugin/extension-guides/task-provider', '任务'],
               ['/VsCodePlugin/extension-guides/scm-provider', '源控制'],
-              ['/VsCodePlugin/extension-guides/debugger-extension', '调试器插件'],
-              ['/VsCodePlugin/extension-guides/markdown-extension', 'Markdown插件'],
+              [
+                '/VsCodePlugin/extension-guides/debugger-extension',
+                '调试器插件'
+              ],
+              [
+                '/VsCodePlugin/extension-guides/markdown-extension',
+                'Markdown插件'
+              ],
               ['/VsCodePlugin/extension-guides/custom-editors', '自定义编辑器'],
-              ['/VsCodePlugin/extension-guides/custom-data-extension', '自定义数据插件'],
+              [
+                '/VsCodePlugin/extension-guides/custom-data-extension',
+                '自定义数据插件'
+              ]
             ]
           },
           {
@@ -241,13 +256,31 @@ module.exports = {
             sidebarDepth: 0,
             children: [
               ['/VsCodePlugin/language-extensions/', '概述'],
-              ['/VsCodePlugin/language-extensions/syntax-highlight-guide', '语法高亮'],
-              ['/VsCodePlugin/language-extensions/semantic-highlight-guide', '语义高亮'],
+              [
+                '/VsCodePlugin/language-extensions/syntax-highlight-guide',
+                '语法高亮'
+              ],
+              [
+                '/VsCodePlugin/language-extensions/semantic-highlight-guide',
+                '语义高亮'
+              ],
               ['/VsCodePlugin/language-extensions/snippet-guide', '代码片段'],
-              ['/VsCodePlugin/language-extensions/language-configuration-guide', '语言配置'],
-              ['/VsCodePlugin/language-extensions/programmatic-language-features', '程序性语言特性'],
-              ['/VsCodePlugin/language-extensions/language-server-extension-guide', '语言服务器'],
-              ['/VsCodePlugin/language-extensions/embedded-languages', '嵌入语言'],
+              [
+                '/VsCodePlugin/language-extensions/language-configuration-guide',
+                '语言配置'
+              ],
+              [
+                '/VsCodePlugin/language-extensions/programmatic-language-features',
+                '程序性语言特性'
+              ],
+              [
+                '/VsCodePlugin/language-extensions/language-server-extension-guide',
+                '语言服务器'
+              ],
+              [
+                '/VsCodePlugin/language-extensions/embedded-languages',
+                '嵌入语言'
+              ]
             ]
           },
           {
@@ -256,7 +289,10 @@ module.exports = {
             children: [
               ['/VsCodePlugin/advanced-topics/extension-host', '插件主机'],
               ['/VsCodePlugin/advanced-topics/remote-extensions', '远程开发'],
-              ['/VsCodePlugin/advanced-topics/using-proposed-api', '使用不稳定的API'],
+              [
+                '/VsCodePlugin/advanced-topics/using-proposed-api',
+                '使用不稳定的API'
+              ]
             ]
           },
           {
@@ -268,20 +304,26 @@ module.exports = {
               ['/VsCodePlugin/references/activation-events', '激活事件'],
               ['/VsCodePlugin/references/extension-manifest', '插件清单'],
               ['/VsCodePlugin/references/commands', '命令'],
-              ['/VsCodePlugin/references/when-clause-contexts', 'when 子句上下文'],
+              [
+                '/VsCodePlugin/references/when-clause-contexts',
+                'when 子句上下文'
+              ],
               ['/VsCodePlugin/references/theme-color', '主题色彩'],
               ['/VsCodePlugin/references/icons-in-labels', '标签中的图标'],
               ['/VsCodePlugin/references/document-selector', '文档选择器'],
-              ['/VsCodePlugin/references/extension-guidelines', '插件开发准则'],
+              ['/VsCodePlugin/references/extension-guidelines', '插件开发准则']
             ]
-          },
+          }
         ]
       },
       {
-        title:'Docker',
+        title: 'Docker',
         collapsable: true,
         sidebarDepth: 0,
-        children: [['/docker/','笔记']]
+        children: [
+          ['/docker/', '常用命令'],
+          ['/docker/dockerfiles', 'dockerfile']
+        ]
       }
     ],
     //Git 仓库和编辑链接
