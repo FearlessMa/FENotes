@@ -165,7 +165,7 @@ typora-copy-images-to: upload
 
   
 
-## provider 与 inject
+## provide 与 inject
 
 - 优点：，`inject`只能用于`provide`后代组件
 
